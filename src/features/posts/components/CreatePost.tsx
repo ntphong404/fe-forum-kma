@@ -28,6 +28,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
   const [selectedGroupId, setSelectedGroupId] = useState(defaultGroupId || '');
   const [postType, setPostType] = useState<PostType>('TEXT');
   const [selectedFiles, setSelectedFiles] = useState<SelectedFileWithPreview[]>([]);
+  const [uploadedFileUrls, setUploadedFileUrls] = useState<string[]>([]); // Cache uploaded URLs
   const [uploading, setUploading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -138,36 +139,42 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
     setError(null);
 
     try {
-      const uploadedUrls: string[] = [];
+      let uploadedUrls: string[] = [...uploadedFileUrls]; // Start with cached URLs
 
-      // Upload all files
+      // Upload only new files that haven't been uploaded yet
       if (selectedFiles.length > 0 && postType !== 'TEXT') {
-        setUploading(true);
-        try {
-          for (const fileItem of selectedFiles) {
-            // Determine upload endpoint based on post type
-            let uploadEndpoint: string;
-            if (postType === 'IMAGE') {
-              uploadEndpoint = '/files/upload/image';
-            } else if (postType === 'VIDEO') {
-              uploadEndpoint = '/files/upload/video';
-            } else {
-              uploadEndpoint = '/files/upload/document';
-            }
+        const filesToUpload = selectedFiles.slice(uploadedFileUrls.length); // Only new files
+        
+        if (filesToUpload.length > 0) {
+          setUploading(true);
+          try {
+            for (const fileItem of filesToUpload) {
+              // Determine upload endpoint based on post type
+              let uploadEndpoint: string;
+              if (postType === 'IMAGE') {
+                uploadEndpoint = '/files/upload/image';
+              } else if (postType === 'VIDEO') {
+                uploadEndpoint = '/files/upload/video';
+              } else {
+                uploadEndpoint = '/files/upload/document';
+              }
 
-            const uploadResult = await ApiService.uploadFile<{
-              resourceUrl: string;
-            }>(
-              uploadEndpoint,
-              fileItem.file
-            );
-            uploadedUrls.push(uploadResult.resourceUrl);
+              const uploadResult = await ApiService.uploadFile<{
+                resourceUrl: string;
+              }>(
+                uploadEndpoint,
+                fileItem.file
+              );
+              uploadedUrls.push(uploadResult.resourceUrl);
+              // Cache each uploaded URL immediately
+              setUploadedFileUrls((prev) => [...prev, uploadResult.resourceUrl]);
+            }
+          } catch (uploadErr: any) {
+            console.error('File upload failed:', uploadErr);
+            throw new Error(uploadErr.message || 'Không thể tải file lên. Vui lòng thử lại.');
+          } finally {
+            setUploading(false);
           }
-        } catch (uploadErr: any) {
-          console.error('File upload failed:', uploadErr);
-          throw new Error(uploadErr.message || 'Không thể tải file lên. Vui lòng thử lại.');
-        } finally {
-          setUploading(false);
         }
       }
 
@@ -190,10 +197,12 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
 
       const newPost = await PostService.createPost(postData);
 
+      // Clear form and cache on success
       setTitle('');
       setContent('');
       setSelectedGroupId('');
       setPostType('TEXT');
+      setUploadedFileUrls([]); // Clear cache on success
       clearAllFiles();
       setIsExpanded(false);
 
@@ -201,6 +210,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
     } catch (err: any) {
       console.error('Failed to create post:', err);
       setError(err.message || 'Không thể đăng bài viết');
+      // Keep uploadedFileUrls cache on error so retry won't re-upload
     } finally {
       setSubmitting(false);
       setUploading(false);
@@ -279,6 +289,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
                 setTitle('');
                 setContent('');
                 setError(null);
+                setUploadedFileUrls([]); // Clear cache when closing
                 clearAllFiles();
               }}
               className="h-8 w-8 sm:h-9 sm:w-9 text-slate-400 hover:bg-slate-100 hover:text-slate-600 rounded-full transition-all"
@@ -300,6 +311,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
               onClick={() => {
                 setPostType('TEXT');
                 clearAllFiles();
+                setUploadedFileUrls([]); // Clear cache when switching type
               }}
               className={`flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-all min-w-[60px] ${postType === 'TEXT'
                 ? 'bg-white text-blue-600 shadow-sm'
@@ -313,6 +325,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
               onClick={() => {
                 setPostType('IMAGE');
                 clearAllFiles();
+                setUploadedFileUrls([]); // Clear cache when switching type
               }}
               className={`flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-all min-w-[60px] ${postType === 'IMAGE'
                 ? 'bg-white text-blue-600 shadow-sm'
@@ -326,6 +339,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
               onClick={() => {
                 setPostType('VIDEO');
                 clearAllFiles();
+                setUploadedFileUrls([]); // Clear cache when switching type
               }}
               className={`flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-all min-w-[60px] ${postType === 'VIDEO'
                 ? 'bg-white text-purple-600 shadow-sm'
@@ -339,6 +353,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
               onClick={() => {
                 setPostType('DOC');
                 clearAllFiles();
+                setUploadedFileUrls([]); // Clear cache when switching type
               }}
               className={`flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-2.5 text-xs sm:text-sm font-medium rounded-lg transition-all min-w-[60px] ${postType === 'DOC'
                 ? 'bg-white text-blue-600 shadow-sm'
@@ -668,6 +683,7 @@ export default function CreatePost({ onPostCreated, defaultGroupId }: CreatePost
                 setTitle('');
                 setContent('');
                 setError(null);
+                setUploadedFileUrls([]); // Clear cache when canceling
                 clearAllFiles();
               }}
               className="rounded-xl px-5 h-10 text-sm font-medium border-slate-200 text-slate-600 hover:bg-slate-100 transition-all"
