@@ -1,0 +1,39 @@
+{
+    "welcome": "Chào mừng",
+    "login": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "forum": "Diễn đàn",
+    "search_placeholder": "Tìm kiếm bài viết, nhóm, người dùng...",
+    "friends": {
+        "title": "Bạn bè",
+        "list": "Danh sách bạn bè",
+        "requests": "Lời mời kết bạn",
+        "blocked": "Người dùng bị chặn",
+        "add_friend": "Kết bạn",
+        "unfriend": "Hủy kết bạn",
+        "block": "Chặn",
+        "unblock": "Bỏ chặn",
+        "accept": "Chấp nhận",
+        "reject": "Từ chối",
+        "cancel_request": "Hủy lời mời",
+        "pending_sent": "Đã gửi lời mời",
+        "no_friends": "Bạn chưa có bạn bè nào",
+        "no_requests": "Không có lời mời kết bạn",
+        "no_blocked": "Không có người dùng bị chặn",
+        "search_friends": "Tìm kiếm bạn bè..."
+    },
+    "groups": {
+        "title": "Nhóm",
+        "all_groups": "Tất cả nhóm",
+        "my_groups": "Nhóm của tôi",
+        "find_groups": "Tìm nhóm",
+        "create_group": "Tạo nhóm",
+        "join": "Tham gia",
+        "leave": "Rời nhóm",
+        "joined": "Đã tham gia",
+        "members": "thành viên",
+        "public": "Công khai",
+        "private": "Riêng tư",
+        "search_placeholder": "Tìm kiếm nhóm..."
+    }
+}

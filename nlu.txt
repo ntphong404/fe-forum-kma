@@ -1,0 +1,2147 @@
+version: "3.1"
+nlu:
+- intent: affirm
+  examples: |
+    - ok
+    - ừ
+    - đúng rồi
+    - có
+    - chuẩn
+    - dung roi
+    - co
+    - yes
+    - yep
+    - uh
+- intent: deny
+  examples: |
+    - không
+    - ko
+    - chưa
+    - không phải
+    - no
+    - không rồi
+    - không cần
+    - không muốn
+    - thôi
+    - thôi không
+    - không ạ
+    - chưa ạ
+    - không đâu
+    - không đúng
+    - không phải vậy
+    - chưa phải
+    - em không
+    - tôi không
+    - không được
+    - không đồng ý
+    - không hợp
+    - chưa được
+    - chưa đủ
+
+- intent: thank
+  examples: |
+    - cảm ơn
+    - cảm ơn nhiều
+    - thanks
+    - thank you
+    - tks
+    - cám ơn bạn
+    - cảm ơn bạn nhé
+    - thank bạn
+    - cảm ơn nhiều nha
+    - cảm ơn em
+    - thanks nhiều
+    - cảm ơn anh
+    - cảm ơn chị
+    - cảm ơn rất nhiều
+
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - chào em
+    - hello
+    - hi
+    - chào anh
+    - chào chị
+    - chào buổi sáng
+    - chào buổi chiều
+    - hey
+    - hola
+    - chào
+    - xin chao
+    - chao ban
+    - hi em
+    - alo
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - bye
+    - goodbye
+    - hẹn gặp lại
+    - chào tạm biệt
+    - bye bye
+    - see you
+    - thôi em đi
+    - cảm ơn em bye
+    - tạm biệt nhé
+    - chào nhé
+    - bye em
+
+- intent: hocPhi
+  examples: |
+    - Học phí bao nhiêu?
+    - Cho em hỏi học phí một tín chỉ ở Học viện Kỹ thuật Mật mã?
+    - Học phí ngành An toàn thông tin là bao nhiêu?
+    - Một năm học CNTT hết khoảng bao nhiêu tiền?
+    - Học phí ngành Điện tử viễn thông bao nhiêu?
+    - Học phí của trường mình có cao không ạ?
+    - Học phí trung bình mỗi kỳ là bao nhiêu?
+    - Trường tính học phí theo tín chỉ hay theo năm?
+    - Học phí có thay đổi qua từng năm không?
+    - Em muốn biết học phí ngành Công nghệ thông tin?
+    - Học phí một kỳ đóng khoảng bao nhiêu?
+    - Tổng học phí cả 4 năm là khoảng bao nhiêu?
+    - Học phí tăng bao nhiêu phần trăm mỗi năm?
+    - Có khác nhau về học phí giữa 3 ngành không?
+    - Học phí hệ chính quy của Học viện là bao nhiêu?
+    - Em muốn tham khảo học phí để chuẩn bị tài chính?
+    - Khi chuyển ngành thì học phí tính thế nào?
+    - Sinh viên chính sách có được giảm học phí không?
+    - Có hỗ trợ đóng học phí theo từng đợt không?
+    - Học phí cho sinh viên năm nhất là bao nhiêu?
+    - hoc phi bao nhieu
+    - hc phi bn nhiu v
+    - hoc phi la bao nhieu
+    - hc phi truong ban la bn nhiu
+    - hoc phi 1 nam het bn tien
+    - học phí bao nhiu v
+    - hc phí bn nhiêu ạ
+    - cho hoi hoc phi nganh cntt
+    - hoc phi co cao ko
+    - dong hoc phi het bn tien
+
+- intent: chuanBiGiayToKhiNhapHoc
+  examples: |
+    - Khi nhập học cần chuẩn bị giấy tờ gì?
+    - Hồ sơ nhập học gồm những gì ạ?
+    - Em cần mang giấy tờ gì khi đến Học viện nhập học?
+    - Khi nhập học có cần giấy báo trúng tuyển không?
+    - Có cần học bạ bản gốc khi nhập học không?
+    - Hồ sơ nhập học có yêu cầu giấy khai sinh không?
+    - Có cần giấy khám sức khỏe khi nhập học không?
+    - Khi nhập học phải nộp bao nhiêu ảnh thẻ?
+    - Nhập học thì nộp bản sao công chứng gì?
+    - Em cần chuẩn bị chứng minh nhân dân khi nhập học không?
+    - Có cần nộp bản gốc bằng tốt nghiệp THPT không?
+    - Thủ tục nhập học của Học viện Kỹ thuật Mật mã gồm gì?
+    - Nhập học có cần giấy báo điểm thi không?
+    - Em cần chuẩn bị sơ yếu lý lịch không?
+    - Hồ sơ nhập học nộp ở đâu?
+    - Em phải chuẩn bị bao nhiêu bộ hồ sơ?
+    - Khi nhập học cần chuẩn bị giấy tờ nào trước tiên?
+    - Có cần mang bản photo công chứng học bạ không?
+    - Em chưa rõ nhập học cần những giấy tờ nào?
+
+- intent: chuyenNganh
+  examples: |
+    - Em có thể chuyển ngành không?
+    - Sinh viên Học viện có được phép đổi ngành không?
+    - Khi đang học CNTT có thể chuyển sang ATTT không?
+    - Học ngành Điện tử viễn thông nhưng muốn chuyển có được không?
+    - Có thể xin chuyển ngành trong năm 2 không?
+    - Em muốn học ngành khác thì có chuyển được không?
+    - Quy định chuyển ngành của Học viện thế nào?
+    - Muốn chuyển ngành cần điều kiện gì?
+    - Có giới hạn số lần chuyển ngành không?
+    - Chuyển ngành có cần thi lại không?
+    - Thủ tục xin chuyển ngành là gì?
+    - Chuyển ngành từ ATTT sang CNTT có khó không?
+    - Học phí khi chuyển ngành tính thế nào?
+    - Có phải học lại các môn đại cương khi chuyển ngành không?
+    - Khi nào thì được phép chuyển ngành?
+    - Em muốn chuyển ngành ngay năm nhất có được không?
+    - Có bắt buộc học xong năm 1 mới được chuyển ngành không?
+    - Chuyển ngành có ảnh hưởng đến thời gian tốt nghiệp không?
+    - Em có thể đăng ký chuyển ngành sau khi học xong năm 1 không?
+    - Nếu học không phù hợp có được đổi ngành khác không?
+
+- intent: phuongThucXetTuyen2025
+  examples: |
+    - Năm 2025 có phương thức xét tuyển nào?
+    - Các phương thức tuyển sinh của Học viện năm 2025?
+    - 2025 trường xét tuyển bằng những cách nào?
+    - Có xét học bạ năm 2025 không?
+    - Năm 2025 có xét điểm thi tốt nghiệp THPT không?
+    - Có tuyển thẳng học sinh giỏi quốc gia không?
+    - Trường có xét tuyển bằng chứng chỉ ngoại ngữ năm 2025 không?
+    - Học viện có tổ chức kỳ thi riêng không?
+    - Có phương thức xét tuyển kết hợp năm 2025 không?
+    - Các hình thức xét tuyển 2025 cụ thể là gì?
+    - 2025 có xét tuyển dựa vào bài thi đánh giá năng lực không?
+    - Em muốn biết phương án tuyển sinh năm 2025?
+    - Trường có tuyển bằng chứng chỉ quốc tế không?
+    - Có xét giải học sinh giỏi cấp tỉnh năm 2025 không?
+    - Phương thức xét tuyển năm 2025 có thay đổi gì không?
+    - Năm 2025 có bao nhiêu phương thức xét tuyển?
+    - Có thể nộp hồ sơ xét tuyển học bạ năm 2025 không?
+    - Năm 2025 Học viện tuyển sinh theo các cách nào?
+    - Trường có tuyển sinh theo diện xét điểm SAT/IELTS không?
+    - Cho em xin thông tin các phương thức xét tuyển năm 2025?
+
+- intent: toHopXetTuyen2025
+  examples: |
+    - Các tổ hợp xét tuyển năm 2025 là gì?
+    - Học viện năm 2025 xét tuyển khối nào?
+    - Cho em xin danh sách tổ hợp xét tuyển 2025?
+    - Các khối xét tuyển vào ngành An toàn thông tin là gì?
+    - 2025 có xét khối A00 không?
+    - Trường có xét tổ hợp A01 năm 2025 không?
+    - Tổ hợp ngành CNTT năm 2025 là gì?
+    - Tổ hợp xét tuyển ngành Điện tử viễn thông thế nào?
+    - Em muốn biết trường có xét khối D01 không?
+    - Trường có tuyển bằng khối D07 năm 2025 không?
+    - Năm 2025 có thêm tổ hợp mới không?
+    - Các tổ hợp xét tuyển cho ba ngành chính gồm những gì?
+    - Năm 2025 có xét tổ hợp Toán – Lý – Anh không?
+    - Học viện có xét tổ hợp Toán – Lý – Hóa không?
+    - Ngành CNTT dùng những khối xét tuyển nào năm 2025?
+    - Em muốn biết tổ hợp xét tuyển ngành ATTT năm 2025?
+    - Tổ hợp cho ngành Điện tử viễn thông 2025 là gì?
+    - Các khối xét tuyển năm 2025 có thay đổi gì không?
+    - Cho em xin thông tin tổ hợp xét tuyển ba ngành năm 2025?
+
+
+- intent: chiTieuTuyenSinhNam2025
+  examples: |
+    - Chỉ tiêu tuyển sinh năm 2025 bao nhiêu?
+    - Năm 2025 Học viện lấy bao nhiêu sinh viên?
+    - Trường dự kiến tuyển bao nhiêu chỉ tiêu năm 2025?
+    - Chỉ tiêu ngành An toàn thông tin năm 2025 là bao nhiêu?
+    - Ngành CNTT năm 2025 có bao nhiêu chỉ tiêu?
+    - Ngành Điện tử viễn thông 2025 lấy bao nhiêu sinh viên?
+    - Tổng chỉ tiêu tuyển sinh năm 2025 của trường là bao nhiêu?
+    - Năm 2025 có tăng chỉ tiêu không?
+    - Chỉ tiêu năm 2025 có giảm so với năm 2024 không?
+    - Em muốn biết chỉ tiêu tuyển sinh từng ngành 2025?
+    - Học viện năm 2025 tuyển bao nhiêu sinh viên chính quy?
+    - Năm 2025 chỉ tiêu cho hệ đại học là bao nhiêu?
+    - Năm 2025 có mở rộng chỉ tiêu cho ngành ATTT không?
+    - Chỉ tiêu tuyển sinh năm 2025 của ba ngành là bao nhiêu?
+    - Em cần số lượng chỉ tiêu tuyển sinh 2025?
+    - Năm 2025 có chỉ tiêu riêng cho nữ sinh không?
+    - Chỉ tiêu xét tuyển theo học bạ năm 2025 là bao nhiêu?
+    - Mỗi ngành được bao nhiêu chỉ tiêu năm 2025?
+    - Năm 2025 trường có bổ sung thêm chỉ tiêu không?
+    - Số lượng sinh viên tuyển năm 2025
+    - Trường tuyển bao nhiêu người năm 2025
+    - Chỉ tiêu đại học chính quy 2025
+    - Năm 2025 tuyển tổng cộng bao nhiêu chỉ tiêu
+    - Chỉ tiêu tuyển sinh của từng ngành năm 2025
+    - chi tieu tuyen sinh nam 2025
+    - truong tuyen bn nguoi nam 2025
+    - chi tieu nam 2025 la bn
+    - nam 2025 lay bn sv
+    - truong tuyen bao nhieu chi tieu
+    - chi tieu 2025 co cao ko
+    - nam 2025 co tang chi tieu ko
+    - cho hoi chi tieu tuyen sinh
+
+- intent: luuYNganhKttvt
+  examples: |
+    - Có lưu ý gì về ngành Kỹ thuật điện tử viễn thông?
+    - Khi học ngành Kỹ thuật điện tử viễn thông cần chú ý gì?
+    - Ngành Điện tử viễn thông có điểm gì đặc biệt?
+    - Có khó khăn gì khi theo học ngành Điện tử viễn thông?
+    - Ngành này cần giỏi môn nào nhất?
+    - Học Kỹ thuật điện tử viễn thông có cần giỏi Toán không?
+    - Khi chọn ngành Điện tử viễn thông cần lưu ý điều gì?
+    - Ngành này có nhiều thực hành không?
+    - Học ngành Điện tử viễn thông có cần kiến thức lập trình không?
+    - Ngành này học nhiều về mạch điện không?
+    - Có nên học ngành Kỹ thuật điện tử viễn thông không?
+    - Ngành này phù hợp với những ai?
+    - Học Điện tử viễn thông cần chuẩn bị gì trước khi nhập học?
+    - Em muốn biết ngành Điện tử viễn thông có gì khác CNTT?
+    - Ngành KTĐTVT có những đặc điểm gì
+    - Khi học KTĐTVT cần chú ý những gì
+    - Điều cần biết về ngành Điện tử viễn thông
+    - Lưu ý quan trọng cho sinh viên KTĐTVT
+    - Ngành Điện tử viễn thông khó hay dễ
+    - Điểm mạnh điểm yếu của ngành KTĐTVT
+    - Các kỹ năng cần chuẩn bị cho KTĐTVT
+    - Sinh viên ngành Điện tử viễn thông cần chuẩn bị kỹ năng gì?
+    - Có lưu ý gì cho sinh viên nữ học ngành Điện tử viễn thông?
+    - Học ngành này có phải đi thực tập nhiều không?
+    - Ngành Điện tử viễn thông có yêu cầu tiếng Anh nhiều không?
+
+- intent: hoSoNop
+  examples: |
+    - Có cần nộp hồ sơ không?
+    - Em có phải nộp hồ sơ giấy không?
+    - Khi xét tuyển có cần nộp hồ sơ bản cứng không?
+    - Hồ sơ nộp qua bưu điện hay online?
+    - Em chỉ đăng ký trực tuyến có cần gửi hồ sơ nữa không?
+    - Có phải nộp hồ sơ gốc ngay khi đăng ký không?
+    - Khi xét tuyển học bạ có phải nộp hồ sơ không?
+    - Nộp hồ sơ trực tiếp tại trường được không?
+    - Có thể nộp hồ sơ online không?
+    - Em muốn biết cách nộp hồ sơ xét tuyển?
+    - Nộp hồ sơ qua cổng thông tin của Bộ hay của trường?
+    - Có hạn cuối nộp hồ sơ không?
+    - Nộp hồ sơ gồm những giấy tờ gì?
+    - Có phải công chứng giấy tờ khi nộp hồ sơ không?
+    - Khi nộp hồ sơ có cần kèm lệ phí không?
+    - Hồ sơ nộp ở đâu?
+    - Năm 2025 có còn yêu cầu nộp hồ sơ giấy không?
+    - Em nộp hồ sơ trực tuyến có cần gửi bổ sung gì không?
+    - Có cần nộp hồ sơ sau khi trúng tuyển không?
+    - Hồ sơ nộp trực tiếp hay gửi qua bưu điện đều được?
+
+- intent: nguyenVong
+  examples: |
+    - Học viện có yêu cầu nguyện vọng 1 không?
+    - Trường chỉ nhận thí sinh đăng ký nguyện vọng 1 thôi à?
+    - Có bắt buộc để Học viện là nguyện vọng 1 không?
+    - Nếu để nguyện vọng 2 có được xét không?
+    - Em đăng ký Học viện là nguyện vọng 3 có được không?
+    - Nguyện vọng bao nhiêu thì mới được trúng tuyển?
+    - Có ưu tiên thí sinh để nguyện vọng 1 không?
+    - Trường xét thí sinh theo nguyện vọng mấy?
+    - Nếu không để nguyện vọng 1 thì cơ hội trúng tuyển thấp không?
+    - Năm 2025 có yêu cầu bắt buộc NV1 không?
+    - Em muốn hỏi cách sắp xếp nguyện vọng để vào Học viện?
+    - Học viện có xét tuyển bình đẳng giữa các nguyện vọng không?
+    - Đăng ký NV2, NV3 có khác gì so với NV1?
+    - Có trường hợp nào bắt buộc để NV1 không?
+    - Em có thể để ngành CNTT ở NV2 không?
+    - Học viện có ưu tiên nguyện vọng 1 trong xét tuyển không?
+    - Nếu thí sinh không để NV1 thì có bị loại không?
+    - Trường xét tuyển dựa vào thứ tự nguyện vọng hay điểm số?
+    - Học viện có bắt buộc nguyện vọng 1 cho ngành ATTT không?
+    - Em muốn biết quy định về nguyện vọng khi xét tuyển?
+
+- intent: heDaoTao
+  examples: |
+    - Trường đào tạo hệ gì?
+    - Học viện có đào tạo hệ chính quy không?
+    - Có đào tạo hệ vừa học vừa làm không?
+    - Có đào tạo văn bằng 2 không?
+    - Học viện đào tạo hệ nào là chủ yếu?
+    - Có hệ đào tạo từ xa không?
+    - Trường chỉ đào tạo đại học chính quy thôi à?
+    - Hệ đào tạo chính của Học viện là gì?
+    - Học viện có đào tạo hệ quân sự không?
+    - Có chương trình đào tạo quốc tế liên kết không?
+    - Trường có đào tạo hệ chất lượng cao không?
+    - Em muốn biết Học viện đào tạo mấy hệ?
+    - Học viện có chương trình đào tạo ngắn hạn không?
+    - Trường có những hệ đào tạo nào
+    - Các hệ đào tạo của Học viện
+    - Học viện đào tạo bao nhiêu hệ
+    - Có hệ đào tạo tại chức không
+    - Hệ đào tạo đại học chính quy
+    - Trường có hệ đào tạo liên kết không
+    - Các loại hình đào tạo tại Học viện
+
+
+- intent: lienThong
+  examples: |
+    - Học viện có đào tạo liên thông không?
+    - Có chương trình liên thông từ cao đẳng lên đại học không?
+    - Em học trung cấp có được liên thông vào Học viện không?
+    - Học viện có nhận liên thông chính quy không?
+    - Có liên thông ngành An toàn thông tin không?
+    - Em muốn học liên thông ngành CNTT có được không?
+    - Liên thông ngành Điện tử viễn thông có mở không?
+    - Học viện có tuyển sinh liên thông năm nay không?
+    - Có chương trình liên thông tại chức không?
+    - Liên thông từ cao đẳng ngành khác sang Học viện được không?
+    - Em muốn hỏi về điều kiện liên thông vào Học viện?
+    - Liên thông học mấy năm?
+    - Có xét tuyển liên thông qua học bạ không?
+    - Liên thông có phải thi tuyển không?
+    - Học viện có liên thông hệ vừa học vừa làm không?
+    - Có liên thông từ cao đẳng chính quy sang đại học không?
+    - Em học cao đẳng CNTT có thể liên thông lên Học viện không?
+    - Có liên thông tại Hà Nội không?
+    - Hồ sơ liên thông gồm những gì?
+    - Năm nay Học viện có mở lớp liên thông không?
+    - Trường có hệ liên thông không?
+    - Học cao đẳng xong có liên thông được không
+    - Điều kiện liên thông từ cao đẳng
+    - Tuyển sinh liên thông năm 2025
+    - Chương trình liên thông đại học
+    - truong co lien thong ko
+    - hoc cao dang co lien thong dc ko
+    - lien thong tu cao dang len dai hoc
+    - co he lien thong khong
+    - lien thong dc ko a
+    - truong nhan lien thong khong
+    - hoc cao dang roi co vao dc khong
+    - dieu kien lien thong la gi
+
+- intent: dangKiXetTuyen
+  examples: |
+    - Đăng ký xét tuyển như thế nào?
+    - Em muốn biết cách đăng ký xét tuyển vào Học viện?
+    - Nộp hồ sơ xét tuyển ở đâu?
+    - Đăng ký xét tuyển online hay phải nộp trực tiếp?
+    - Em cần đăng ký xét tuyển qua cổng nào?
+    - Có đăng ký xét tuyển qua Cổng thông tin của Bộ GD&ĐT không?
+    - Đăng ký xét tuyển bằng học bạ thế nào?
+    - Em muốn hỏi quy trình đăng ký xét tuyển?
+    - Đăng ký xét tuyển có mất phí không?
+    - Khi đăng ký xét tuyển có cần bản giấy không?
+    - Có thể đăng ký xét tuyển trực tuyến không?
+    - Cách đăng ký xét tuyển theo điểm thi tốt nghiệp?
+    - Em muốn hỏi về thời gian đăng ký xét tuyển?
+    - Học viện có cổng đăng ký riêng không?
+    - Đăng ký xét tuyển bằng chứng chỉ ngoại ngữ thế nào?
+    - Có thể đăng ký nhiều nguyện vọng được không?
+    - Em muốn đăng ký xét tuyển ngành An toàn thông tin thì làm sao?
+    - Học viện hướng dẫn đăng ký xét tuyển như thế nào?
+    - Đăng ký xét tuyển có qua email không?
+    - Có hạn cuối đăng ký xét tuyển không?
+
+- intent: phucKhao
+  examples: |
+    - Có được phúc khảo điểm không?
+    - Em muốn phúc khảo bài thi thì làm thế nào?
+    - Học viện có cho phúc khảo điểm không?
+    - Thủ tục phúc khảo điểm thi ra sao?
+    - Phúc khảo kết quả xét tuyển có được không?
+    - Có thể xin chấm phúc khảo bài thi không?
+    - Em muốn phúc khảo điểm xét học bạ có được không?
+    - Có phúc khảo điểm thi tốt nghiệp không?
+    - Khi nào có thể làm đơn phúc khảo?
+    - Đơn phúc khảo nộp ở đâu?
+    - Có phải đóng lệ phí khi phúc khảo không?
+    - Em muốn biết thời gian phúc khảo?
+    - Học viện có quy định phúc khảo riêng không?
+    - Có thể phúc khảo điểm chuẩn không?
+    - Em thấy điểm công bố sai có được phúc khảo không?
+    - Có thể phúc khảo trực tuyến không?
+    - Em muốn xin phúc khảo ngay sau khi có kết quả?
+    - Có giới hạn số lần phúc khảo không?
+    - Phúc khảo điểm xét tuyển năm nay thế nào?
+    - Khiếu nại điểm thì có phải làm đơn phúc khảo không?
+
+- intent: diemChuanDuKien
+  examples: |
+    - Điểm chuẩn dự kiến là bao nhiêu?
+    - Năm nay điểm chuẩn dự kiến khoảng bao nhiêu?
+    - Học viện công bố điểm chuẩn dự kiến chưa?
+    - Điểm chuẩn dự kiến ngành An toàn thông tin là bao nhiêu?
+    - Ngành CNTT điểm chuẩn dự kiến thế nào?
+    - Điểm chuẩn ngành Điện tử viễn thông dự kiến khoảng bao nhiêu?
+    - Điểm chuẩn dự kiến năm 2025 so với năm 2024 có cao hơn không?
+    - Khi nào có điểm chuẩn dự kiến?
+    - Điểm chuẩn dự kiến từng ngành thế nào?
+    - Em muốn biết điểm chuẩn dự kiến để tham khảo?
+    - Trường có công bố điểm chuẩn dự kiến không?
+    - Điểm chuẩn dự kiến có khác so với điểm chính thức không?
+    - Điểm chuẩn dự kiến năm nay có tăng không?
+    - Em muốn biết điểm chuẩn dự kiến ngành CNTT?
+    - Điểm chuẩn dự kiến ATTT bao nhiêu?
+    - Có tài liệu tham khảo điểm chuẩn dự kiến không?
+    - Điểm chuẩn dự kiến do Học viện đưa ra hay Bộ?
+    - Điểm chuẩn dự kiến năm nay công bố ở đâu?
+    - Khi nào Học viện đưa ra điểm chuẩn dự kiến?
+    - Em cần điểm chuẩn dự kiến để đăng ký nguyện vọng?
+
+- intent: diemSan
+  examples: |
+    - Điểm sàn năm nay bao nhiêu?
+    - Học viện có công bố điểm sàn chưa?
+    - Năm 2025 điểm sàn xét tuyển là bao nhiêu?
+    - Điểm sàn từng ngành bao nhiêu?
+    - Ngành ATTT điểm sàn bao nhiêu?
+    - Ngành CNTT có điểm sàn bao nhiêu?
+    - Ngành Điện tử viễn thông điểm sàn thế nào?
+    - Điểm sàn của Học viện so với năm trước thế nào?
+    - Khi nào công bố điểm sàn?
+    - Điểm sàn chung toàn trường là bao nhiêu?
+    - Có sự khác biệt điểm sàn giữa các ngành không?
+    - Điểm sàn năm nay tăng hay giảm?
+    - Điểm sàn 2025 so với 2024 có thay đổi không?
+    - Điểm sàn xét học bạ bao nhiêu?
+    - Điểm sàn xét thi tốt nghiệp bao nhiêu?
+    - Điểm sàn cho phương thức xét tuyển kết hợp là bao nhiêu?
+    - Em muốn biết điểm sàn tối thiểu của Học viện?
+    - Điểm sàn cho thí sinh khu vực miền Nam có khác không?
+    - Điểm sàn ngành CNTT có cao không?
+    - Học viện công bố điểm sàn ở đâu?
+
+- intent: uuTien
+  examples: |
+    - Có chính sách ưu tiên nào không?
+    - Trường có ưu tiên cho khu vực không?
+    - Em ở KV1 có được cộng điểm không?
+    - Học viện có cộng điểm ưu tiên không?
+    - Có chế độ ưu tiên cho con thương binh liệt sĩ không?
+    - Ưu tiên khu vực miền núi tính thế nào?
+    - Năm 2025 chính sách ưu tiên có thay đổi gì không?
+    - Em thuộc diện ưu tiên 0,5 điểm có được áp dụng không?
+    - Học viện có ưu tiên cho học sinh giỏi quốc gia không?
+    - Chính sách ưu tiên cho thí sinh vùng sâu vùng xa?
+    - Có ưu tiên tuyển thẳng không?
+    - Trường có cộng điểm cho đối tượng ưu tiên không?
+    - Ưu tiên đối tượng 1, 2, 3 áp dụng ra sao?
+    - Có chính sách ưu tiên đặc biệt cho nữ sinh không?
+    - Học viện có cộng điểm ưu tiên chứng chỉ quốc tế không?
+    - Các mức ưu tiên được tính như thế nào?
+    - Có được cộng dồn nhiều loại ưu tiên không?
+    - Ưu tiên tuyển sinh năm nay có giống Bộ quy định không?
+    - Em muốn biết chi tiết về các diện ưu tiên?
+    - Chính sách ưu tiên áp dụng cho cả 3 ngành không?
+
+- intent: tuVanDangKy
+  examples: |
+    - Em muốn được tư vấn đăng ký thì liên hệ ở đâu?
+    - Có số hotline tư vấn tuyển sinh không?
+    - Em cần tư vấn thì gọi cho ai?
+    - Liên hệ tư vấn tuyển sinh như thế nào?
+    - Học viện có fanpage tư vấn không?
+    - Có email hỗ trợ đăng ký xét tuyển không?
+    - Em muốn hỏi trực tiếp thì gặp ở đâu?
+    - Có văn phòng tư vấn tuyển sinh không?
+    - Em muốn được hỗ trợ đăng ký hồ sơ thì gọi số nào?
+    - Học viện có nhóm Zalo, Facebook hỗ trợ không?
+    - Có thể liên hệ qua hotline để được tư vấn không?
+    - Em cần tư vấn về chọn ngành thì hỏi ai?
+    - Có địa chỉ phòng tư vấn tuyển sinh không?
+    - Em muốn gặp trực tiếp thầy cô tư vấn được không?
+    - Có kênh hỗ trợ trực tuyến không?
+    - Em cần tư vấn thì inbox fanpage có trả lời không?
+    - Có đường dây nóng cho thí sinh năm nay không?
+    - Em có thể liên hệ phòng đào tạo để hỏi không?
+    - Có hỗ trợ tư vấn vào cuối tuần không?
+    - Em muốn được tư vấn nhanh thì liên hệ thế nào?
+
+- intent: thongTinChung
+  examples: |
+    - Cho em xin thông tin chung về trường?
+    - Học viện Kỹ thuật Mật mã là trường gì?
+    - Trường thuộc Bộ nào quản lý?
+    - Học viện có từ khi nào?
+    - Cho em hỏi địa chỉ của trường?
+    - Trường có bao nhiêu cơ sở?
+    - Cơ sở chính của Học viện ở đâu?
+    - Thông tin giới thiệu về Học viện?
+    - Em muốn biết đôi nét về Học viện?
+    - Học viện Kỹ thuật Mật mã đào tạo mấy ngành?
+    - Cho em biết thông tin tổng quan về Học viện?
+    - Học viện có bao nhiêu sinh viên đang học?
+    - Học viện có đặc điểm gì nổi bật?
+    - Trường trực thuộc Bộ Quốc phòng đúng không?
+    - Em muốn biết về lịch sử hình thành của Học viện?
+    - Trường có quan hệ hợp tác quốc tế không?
+    - Cho em thông tin cơ bản về trường?
+    - Học viện có môi trường học tập như thế nào?
+    - Trường có slogan hoặc phương châm đào tạo không?
+
+- intent: caoDang
+  examples: |
+    - Trường có đào tạo hệ Cao đẳng không?
+    - Học viện có tuyển sinh Cao đẳng không?
+    - Năm nay có mở lớp Cao đẳng không?
+    - Có hệ Cao đẳng ngành CNTT không?
+    - Em muốn học Cao đẳng ATTT ở Học viện có được không?
+    - Có chương trình Cao đẳng chính quy không?
+    - Học viện chỉ đào tạo đại học thôi à?
+    - Có liên thông từ Cao đẳng nội bộ không?
+    - Trường có còn tuyển sinh hệ Cao đẳng không?
+    - Có ngành Điện tử viễn thông hệ Cao đẳng không?
+    - Em muốn biết Học viện có đào tạo bậc Cao đẳng không?
+    - Có chương trình Cao đẳng tại chức không?
+    - Trường hiện tại còn hệ Cao đẳng không?
+    - Năm nay có tuyển sinh hệ Cao đẳng không?
+    - Em muốn đăng ký Cao đẳng có được không?
+    - Cao đẳng của Học viện có đào tạo chính quy không?
+    - Trường có cấp bằng Cao đẳng không?
+    - Học viện có liên kết đào tạo Cao đẳng không?
+    - Có lớp Cao đẳng buổi tối không?
+    - Học viện hiện có những bậc đào tạo nào?
+
+- intent: ccta
+  examples: |
+    - Có cộng điểm chứng chỉ tiếng Anh không?
+    - Trường có xét chứng chỉ IELTS không?
+    - Học viện có cộng điểm TOEFL không?
+    - Có ưu tiên cho thí sinh có chứng chỉ ngoại ngữ không?
+    - Năm 2025 có cộng điểm chứng chỉ tiếng Anh quốc tế không?
+    - Học viện có xét tuyển bằng chứng chỉ tiếng Anh không?
+    - Có được quy đổi điểm IELTS sang điểm xét tuyển không?
+    - Trường có ưu tiên nếu có IELTS 6.5 không?
+    - Có cộng điểm TOEIC không?
+    - Học viện có tuyển thẳng với chứng chỉ tiếng Anh không?
+    - Có xét tuyển kết hợp chứng chỉ tiếng Anh không?
+    - Em có IELTS thì có lợi thế gì không?
+    - Em có Toeic thì có lợi thế gì không?
+    - Có thể thay thế môn tiếng Anh bằng chứng chỉ quốc tế không?
+    - Trường có yêu cầu chứng chỉ tiếng Anh khi xét tuyển không?
+    - Có cộng điểm ngoại ngữ khi nộp hồ sơ không?
+    - Năm nay có thay đổi gì về cộng điểm tiếng Anh không?
+    - Học viện có xét tuyển riêng cho thí sinh có IELTS không?
+    - Có cộng điểm cho tiếng Anh học sinh giỏi không?
+    - Em có IELTS thì điểm chuẩn có giảm không?
+    - Chứng chỉ tiếng Anh có tác dụng thế nào khi xét tuyển?
+
+- intent: tuyenSinhSauDaiHoc
+  examples: |
+    - Trường có tuyển sinh sau đại học không?
+    - Học viện có đào tạo cao học không?
+    - Có chương trình đào tạo thạc sĩ không?
+    - Em muốn học sau đại học ở Học viện được không?
+    - Trường có mở lớp cao học CNTT không?
+    - Có tuyển sinh cao học An toàn thông tin không?
+    - Học viện có chương trình tiến sĩ không?
+    - Có đào tạo sau đại học về kỹ thuật mật mã không?
+    - Học viện có khóa học thạc sĩ nào?
+    - Có thể học sau đại học ngành điện tử viễn thông không?
+    - Có tuyển sinh cao học năm 2025 không?
+    - Điều kiện thi cao học ở Học viện là gì?
+    - Trường có đào tạo nghiên cứu sinh không?
+    - Em muốn biết thông tin về sau đại học của trường?
+    - Có hệ đào tạo sau đại học liên kết quốc tế không?
+    - Sau đại học ở Học viện học trong mấy năm?
+    - Có tuyển sinh sau đại học theo diện vừa học vừa làm không?
+    - Học viện có chương trình bồi dưỡng sau đại học không?
+    - Có mở lớp văn bằng thạc sĩ thứ hai không?
+    - Trường hiện có những ngành nào đào tạo sau đại học?
+    - Em muốn biết Học viện có đào tạo hệ cao học không?
+    - Học viện có đào tạo tiến sĩ không?
+    - Học viện có đào tạo sau đại học ngành An toàn thông tin không?
+    - Có đào tạo thạc sĩ ngành CNTT không?
+    - Có đào tạo hệ đại học và cao học song song không?
+    - Tuyển sinh thạc sĩ năm 2025
+    - truong co day sau dai hoc ko
+    - co tuyen sinh cao hoc khong
+    - truong co dao tao thac si ko a
+    - hoc vien co cao hoc ko
+    - co he sau dai hoc khong
+    - truong day cao hoc nganh nao
+    - co thi cao hoc ko
+    - dao tao sau dai hoc dc ko
+    - Điều kiện xét tuyển cao học
+    - Học cao học tại Học viện
+    - Thông tin tuyển sinh sau đại học
+
+- intent: songNganh
+  examples: |
+    - Có được học song ngành không?
+    - Học viện cho phép sinh viên học 2 ngành cùng lúc không?
+    - Có thể vừa học CNTT vừa học ATTT không?
+    - Em muốn học song song ngành Kỹ thuật điện tử và CNTT có được không?
+    - Sinh viên có được đăng ký thêm một ngành khác không?
+    - Trường có chính sách học song ngành không?
+    - Em muốn tốt nghiệp 2 bằng ở Học viện có được không?
+    - Có được đăng ký ngành phụ song song ngành chính không?
+    - Sinh viên học song ngành có yêu cầu gì đặc biệt không?
+    - Học song ngành thì học phí tính thế nào?
+    - Có thể học song ngành CNTT và ATTT không?
+    - Em muốn biết quy định học song ngành của trường?
+    - Có thể đăng ký học song ngành ngay từ năm nhất không?
+    - Học song ngành được cấp mấy bằng?
+    - Sinh viên giỏi có được phép học 2 ngành không?
+    - Trường có cho học ngành chính + ngành phụ không?
+    - Em có thể vừa học ATTT vừa học Điện tử viễn thông không?
+    - Có hỗ trợ học song ngành không?
+    - Quy trình đăng ký học song ngành như thế nào?
+    - Học song ngành có giới hạn số tín chỉ không?
+
+- intent: doiTuongTuyenSinhDaiHoc
+  examples: |
+    - Đối tượng nào được tuyển sinh đại học?
+    - Ai có thể đăng ký xét tuyển vào Học viện?
+    - Học viện tuyển sinh những đối tượng nào?
+    - Em là học sinh lớp 12 thì có được đăng ký không?
+    - Thí sinh tự do có được tham gia xét tuyển không?
+    - Đối tượng tuyển sinh của trường năm 2025 là gì?
+    - Học viện chỉ tuyển thí sinh tốt nghiệp THPT thôi à?
+    - Có tuyển sinh đối tượng đã đi nghĩa vụ quân sự không?
+    - Trường có tuyển sinh đối tượng đã tốt nghiệp CĐ không?
+    - Đối tượng tuyển sinh có bao gồm liên thông không?
+    - Có nhận thí sinh đã tốt nghiệp trung cấp không?
+    - Ai được quyền đăng ký xét tuyển đại học?
+    - Đối tượng dự thi tuyển sinh đại học năm nay?
+    - Có tuyển thí sinh nước ngoài không?
+    - Đối tượng tuyển sinh của trường gồm những ai?
+    - Em đã đi làm rồi có thể đăng ký đại học không?
+    - Học viện tuyển sinh đại học cho mọi tỉnh thành đúng không?
+    - Có tuyển sinh hệ dân sự không?
+    - Đối tượng nào không được đăng ký dự tuyển?
+    - Em muốn biết chi tiết đối tượng tuyển sinh?
+    - Ai được phép thi vào trường
+    - Những ai đủ điều kiện dự tuyển
+    - Em có đủ điều kiện xét tuyển không
+    - Đối tượng được tuyển thẳng
+    - Thí sinh nào được đăng ký
+    - Yêu cầu về đối tượng tuyển sinh
+
+- intent: chuyenNganhHepCntt
+  examples: |
+    - Ngành CNTT có các chuyên ngành hẹp nào?
+    - Công nghệ thông tin phân ra những chuyên ngành gì?
+    - Học viện có chuyên ngành hẹp trong CNTT không?
+    - Em muốn biết chuyên ngành của CNTT?
+    - Ngành CNTT tại Học viện đào tạo mấy chuyên ngành?
+    - Có các chuyên ngành hẹp nào trong ngành CNTT?
+    - Em có thể chọn chuyên ngành hẹp CNTT không?
+    - Học viện chia CNTT thành những hướng nào?
+    - Các lĩnh vực chuyên sâu của ngành CNTT là gì?
+    - Có chuyên ngành phần mềm trong CNTT không?
+    - Ngành CNTT có đào tạo trí tuệ nhân tạo không?
+    - Các chuyên ngành nhỏ của CNTT gồm những gì?
+    - Học viện có chuyên ngành mạng máy tính trong CNTT không?
+    - Em muốn biết CNTT đào tạo theo hướng nào?
+    - Ngành CNTT học chuyên ngành hẹp từ năm mấy?
+    - Có thể chọn chuyên ngành hẹp trong CNTT như an ninh mạng không?
+    - CNTT có phân ngành thành hệ thống thông tin, phần mềm, mạng không?
+    - Ngành CNTT có chuyên ngành dữ liệu lớn không?
+    - Có bao nhiêu chuyên ngành hẹp CNTT được mở?
+    - Học viện cho sinh viên CNTT chọn chuyên ngành hẹp khi nào?
+
+- intent: chuyenNganhHepAttt
+  examples: |
+    - Ngành ATTT có chuyên ngành hẹp gì?
+    - An toàn thông tin được chia thành mấy chuyên ngành?
+    - Em muốn biết chuyên ngành hẹp của ATTT?
+    - Học viện đào tạo ATTT theo hướng nào?
+    - ATTT có chuyên sâu về mật mã không?
+    - Ngành ATTT có chuyên ngành mạng không?
+    - Chuyên ngành an ninh mạng thuộc ATTT đúng không?
+    - Có chuyên ngành hẹp bảo mật hệ thống trong ATTT không?
+    - Ngành ATTT chia thành những mảng nào?
+    - Có chuyên ngành phòng chống tấn công mạng không?
+    - Em muốn học chuyên ngành mật mã trong ATTT có được không?
+    - Ngành ATTT có hướng nghiên cứu và hướng ứng dụng không?
+    - Có chuyên ngành kỹ thuật mật mã riêng không?
+    - Các chuyên ngành đào tạo chi tiết của ATTT?
+    - ATTT có chuyên ngành quản trị an ninh mạng không?
+    - Học viện có dạy ATTT chuyên sâu về phần mềm độc hại không?
+    - ATTT được chia thành các nhánh nào?
+    - Sinh viên ATTT chọn chuyên ngành hẹp từ năm mấy?
+    - Em muốn biết ngành ATTT đào tạo cụ thể các lĩnh vực nào?
+    - Có phân ngành ATTT trong khối quốc phòng và dân sự không?
+
+- intent: chuyenNganhHepKtdtvt
+  examples: |
+    - Ngành KTĐTVT có chuyên ngành hẹp nào?
+    - Điện tử viễn thông được chia thành mấy chuyên ngành?
+    - Ngành kỹ thuật điện tử viễn thông có chuyên ngành hẹp không?
+    - Em muốn biết chuyên ngành của KTĐTVT?
+    - Học viện đào tạo KTĐTVT theo những hướng nào?
+    - Có chuyên ngành điện tử không?
+    - KTĐTVT có đào tạo về viễn thông không?
+    - Ngành này có chuyên ngành hẹp về thiết bị điện tử không?
+    - Có chuyên ngành hẹp về truyền thông số không?
+    - Em muốn học chuyên ngành vi mạch trong KTĐTVT có được không?
+    - Các hướng chuyên sâu trong KTĐTVT là gì?
+    - Có chuyên ngành viễn thông quân sự không?
+    - Ngành KTĐTVT phân chia thành những mảng nào?
+    - Có chuyên ngành mạng viễn thông trong KTĐTVT không?
+    - Sinh viên KTĐTVT được chọn chuyên ngành hẹp từ năm mấy?
+    - KTĐTVT có đào tạo chuyên ngành công nghệ 5G không?
+    - Có chuyên ngành điện tử máy tính không?
+    - Các chuyên ngành cụ thể của KTĐTVT là gì?
+    - Em muốn biết KTĐTVT học sâu vào lĩnh vực nào?
+    - Có chuyên ngành hệ thống thông tin viễn thông không?
+
+- intent: nguoiGiamHoNhapHoc
+  examples: |
+    - Khi nhập học có cần người giám hộ đi cùng không?
+    - Em nhập học có cần phụ huynh đi cùng không?
+    - Ngày làm thủ tục nhập học có cần bố mẹ đi theo không?
+    - Học viện có yêu cầu người giám hộ đi cùng khi nhập học không?
+    - Em tự đi nhập học có được không?
+    - Nếu bố mẹ bận thì em nhập học một mình có sao không?
+    - Có bắt buộc phụ huynh đi cùng ngày nhập học không?
+    - Khi nhập học sinh viên có cần có người giám hộ không?
+    - Em đủ 18 tuổi rồi có cần người giám hộ nữa không?
+    - Ngày nhập học có cần giấy xác nhận của phụ huynh không?
+    - Có yêu cầu cha mẹ ký giấy tờ khi nhập học không?
+    - Học viện có bắt buộc phụ huynh đi cùng khi làm thủ tục không?
+    - Em muốn biết nhập học có cần phụ huynh đi cùng không?
+    - Nếu người giám hộ không đi cùng thì có ảnh hưởng gì không?
+    - Khi nhập học có cần có mặt cả phụ huynh và học sinh không?
+    - Có thể ủy quyền cho người thân khác đi cùng khi nhập học không?
+    - Trường có yêu cầu giấy tờ từ người giám hộ không?
+    - Có quy định cụ thể về người giám hộ ngày nhập học không?
+    - Sinh viên nhập học một mình có hợp lệ không?
+    - Nếu phụ huynh ở xa thì có cần đến nhập học không?
+
+- intent: hoiVeKiTucXa
+  examples: |
+    - Trường có ký túc xá không?
+    - Học viện có chỗ ở cho sinh viên không?
+    - Em muốn đăng ký ký túc xá thì làm thế nào?
+    - Ký túc xá của Học viện ở đâu?
+    - Sinh viên năm nhất có được ở ký túc xá không?
+    - Có bao nhiêu chỗ ký túc xá cho sinh viên?
+    - Em muốn biết trường có hỗ trợ ký túc xá không?
+    - Ký túc xá Học viện có đầy đủ tiện nghi không?
+    - Chi phí ký túc xá mỗi tháng là bao nhiêu?
+    - Em muốn ở ký túc xá thì đăng ký ở đâu?
+    - Ký túc xá có gần trường không?
+    - Học viện có bao nhiêu dãy ký túc xá?
+    - Sinh viên ở tỉnh xa có được ưu tiên ký túc xá không?
+    - Ký túc xá có điều hòa không?
+    - Có giới hạn số sinh viên ở ký túc xá không?
+    - Em muốn hỏi về điều kiện ở ký túc xá?
+    - Trường có khu ký túc riêng cho nam và nữ không?
+    - Đăng ký ký túc xá khi nào?
+    - Có hỗ trợ ký túc xá cho sinh viên khó khăn không?
+    - Học viện có ký túc xá ở cơ sở Hà Nội không?
+
+- intent: hocBong
+  examples: |
+    - Có học bổng không?
+    - Học viện có chính sách học bổng cho sinh viên không?
+    - Em muốn biết về học bổng của trường?
+    - Học bổng được cấp theo tiêu chí nào?
+    - Sinh viên giỏi có được học bổng không?
+    - Có học bổng khuyến khích học tập không?
+    - Học bổng được xét theo học kỳ hay năm học?
+    - Học viện có học bổng tài trợ từ doanh nghiệp không?
+    - Em muốn đăng ký học bổng thì làm thế nào?
+    - Học bổng của trường trị giá bao nhiêu?
+    - Có học bổng cho sinh viên nghèo vượt khó không?
+    - Điều kiện để nhận học bổng là gì?
+    - Có bao nhiêu loại học bổng trong Học viện?
+    - Em muốn hỏi về mức học bổng khuyến khích học tập?
+    - Sinh viên đạt giải thưởng có được cấp học bổng không?
+    - Có học bổng dành cho nữ sinh không?
+    - Học viện có học bổng quốc phòng không?
+    - Có học bổng toàn phần không?
+    - Em muốn hỏi cách xét học bổng ở Học viện?
+    - Học viện có chính sách miễn giảm học phí không?
+
+- intent: vayVonNganHang
+  examples: |
+    - Có hỗ trợ vay vốn ngân hàng không?
+    - Sinh viên có được vay vốn ngân hàng không?
+    - Học viện có chương trình hỗ trợ tín dụng học tập không?
+    - Em muốn vay vốn để đóng học phí thì làm thế nào?
+    - Có liên kết với ngân hàng để cho sinh viên vay không?
+    - Vay vốn sinh viên có cần giấy xác nhận của trường không?
+    - Thủ tục vay vốn ngân hàng khi học ở Học viện thế nào?
+    - Em ở tỉnh xa muốn vay vốn học tập có được không?
+    - Có chính sách hỗ trợ vay vốn ưu đãi không?
+    - Ngân hàng nào liên kết với trường cho vay sinh viên?
+    - Có được vay vốn theo diện sinh viên nghèo vượt khó không?
+    - Em muốn biết về chính sách vay vốn học phí?
+    - Vay vốn ngân hàng khi học tại Học viện có lãi suất thấp không?
+    - Có hỗ trợ giấy tờ để sinh viên vay vốn không?
+    - Vay vốn sinh viên được bao nhiêu tiền một tháng?
+    - Học viện có xác nhận cho sinh viên vay vốn không?
+    - Em muốn vay vốn học tập thì cần điều kiện gì?
+    - Có hỗ trợ vay vốn cho sinh viên năm nhất không?
+    - Vay vốn ngân hàng để học đại học có dễ không?
+    - Thủ tục chứng minh vay vốn sinh viên ở Học viện?
+
+- intent: raVaoHocVien
+  examples: |
+    - Quy định ra vào học viện thế nào?
+    - Sinh viên có cần thẻ khi ra vào Học viện không?
+    - Học viện có kiểm soát cổng ra vào không?
+    - Em muốn biết quy định cổng trường thế nào?
+    - Sinh viên có được đi lại tự do trong khuôn viên không?
+    - Có giờ giới nghiêm khi vào Học viện không?
+    - Khách đến thăm sinh viên cần thủ tục gì?
+    - Có cần xuất trình thẻ sinh viên khi vào Học viện không?
+    - Sinh viên ra ngoài vào ban đêm có bị giới hạn không?
+    - Học viện có kiểm tra giấy tờ khi ra vào không?
+    - Người ngoài có được vào Học viện không?
+    - Quy định đón sinh viên tại cổng thế nào?
+    - Có cần đăng ký trước khi ra khỏi Học viện không?
+    - Cổng trường mở cửa đến mấy giờ?
+    - Có phân cổng riêng cho sinh viên và khách không?
+    - Sinh viên ở ký túc có bị quản lý giờ ra vào không?
+    - Quy định về ra vào của cán bộ, khách, sinh viên thế nào?
+    - Em muốn hỏi về bảo vệ và kiểm soát ra vào?
+    - Có được mang xe máy vào Học viện không?
+    - Học viện có thẻ từ kiểm soát ra vào không?
+
+- intent: cauLacBo
+  examples: |
+    - Có câu lạc bộ nào trong trường?
+    - Học viện có các câu lạc bộ sinh viên không?
+    - Em muốn tham gia câu lạc bộ thì làm thế nào?
+    - Có câu lạc bộ thể thao không?
+    - Trường có CLB tiếng Anh không?
+    - Có CLB công nghệ thông tin không?
+    - Học viện có CLB học thuật nào?
+    - Em muốn biết danh sách các câu lạc bộ trong trường?
+    - CLB ở Học viện thường hoạt động thế nào?
+    - Có CLB bóng đá không?
+    - Học viện có CLB văn nghệ không?
+    - Sinh viên năm nhất có được tham gia CLB không?
+    - Có CLB khởi nghiệp trong trường không?
+    - Học viện có CLB an toàn thông tin không?
+    - Có CLB võ thuật không?
+    - Em muốn tham gia CLB thì liên hệ ở đâu?
+    - Có bao nhiêu câu lạc bộ sinh viên ở Học viện?
+    - CLB sinh viên hoạt động vào thời gian nào?
+    - Có CLB tình nguyện không?
+    - CLB trong Học viện do ai quản lý?
+
+- intent: giaiTri
+  examples: |
+    - Trường có hoạt động giải trí gì?
+    - Sinh viên có được tham gia hoạt động ngoại khóa không?
+    - Học viện có tổ chức văn nghệ không?
+    - Có lễ hội thường niên nào không?
+    - Sinh viên có hoạt động thể thao giải trí không?
+    - Trường có tổ chức dã ngoại cho sinh viên không?
+    - Có chương trình giao lưu văn nghệ không?
+    - Học viện có giải thể thao thường niên không?
+    - Có hoạt động vui chơi cuối tuần cho sinh viên không?
+    - Học viện có tổ chức hội trại không?
+    - Sinh viên có thể tham gia các hoạt động giải trí nào?
+    - Có tổ chức ngày hội tân sinh viên không?
+    - Trường có cuộc thi học thuật, giải trí nào không?
+    - Có sự kiện thể thao như bóng đá, bóng chuyền không?
+    - Hoạt động văn nghệ của sinh viên diễn ra khi nào?
+    - Học viện có tổ chức giải trí dịp lễ tết không?
+    - Có hoạt động tình nguyện kết hợp vui chơi không?
+    - Có chương trình gala cuối năm không?
+    - Hoạt động giải trí ở Học viện do ai tổ chức?
+    - Em muốn biết sinh viên thường giải trí bằng gì?
+
+- intent: thuVien
+  examples: |
+    - Thư viện có những gì?
+    - Học viện có thư viện cho sinh viên không?
+    - Em muốn biết thư viện trường có bao nhiêu sách?
+    - Thư viện có tài liệu chuyên ngành không?
+    - Có thư viện điện tử không?
+    - Sinh viên được mượn sách trong bao lâu?
+    - Thư viện mở cửa đến mấy giờ?
+    - Có khu tự học trong thư viện không?
+    - Em muốn đăng ký thẻ thư viện thì làm thế nào?
+    - Thư viện có tài liệu ngoại ngữ không?
+    - Học viện có thư viện online không?
+    - Có wifi trong thư viện không?
+    - Thư viện có bao nhiêu chỗ ngồi học?
+    - Em có thể photo tài liệu ở thư viện không?
+    - Thư viện có giáo trình chính thức của trường không?
+    - Có sách tham khảo cho cả 3 ngành không?
+    - Sinh viên năm nhất có được vào thư viện không?
+    - Thư viện có khu vực máy tính cho sinh viên không?
+    - Em muốn hỏi về nội quy thư viện?
+    - Học viện có phòng đọc mở buổi tối không?
+
+- intent: cangTin
+  examples: |
+    - Có căng tin trong trường không?
+    - Học viện có nhà ăn sinh viên không?
+    - Trường có căng tin phục vụ ăn uống không?
+    - Sinh viên ăn ở đâu trong Học viện?
+    - Căng tin bán những món gì?
+    - Có nhiều quán ăn trong trường không?
+    - Em muốn biết giá cả trong căng tin thế nào?
+    - Căng tin mở cửa đến mấy giờ?
+    - Có căng tin phục vụ buổi tối không?
+    - Sinh viên có được ra ngoài ăn không?
+    - Thức ăn trong căng tin có rẻ không?
+    - Căng tin có khu vực cho giảng viên riêng không?
+    - Trong Học viện có bao nhiêu căng tin?
+    - Căng tin có phục vụ đồ uống không?
+    - Có chỗ ngồi rộng trong căng tin không?
+    - Căng tin có bán đồ ăn sáng không?
+    - Em muốn hỏi về dịch vụ ăn uống trong Học viện?
+    - Căng tin ở cơ sở Hà Nội nằm ở đâu?
+    - Có dịch vụ căng tin tại ký túc xá không?
+    - Căng tin trong Học viện do ai quản lý?
+
+- intent: phongHoc
+  examples: |
+    - Phòng học có tiện nghi gì?
+    - Học viện có nhiều phòng học không?
+    - Phòng học có máy chiếu không?
+    - Có phòng học thông minh không?
+    - Phòng học có điều hòa không?
+    - Phòng học có trang bị wifi không?
+    - Em muốn biết phòng học trong Học viện thế nào?
+    - Phòng học có đủ bàn ghế không?
+    - Có phòng học lớn cho hội thảo không?
+    - Sinh viên có được học trong giảng đường không?
+    - Phòng học có trang bị loa đài không?
+    - Có bao nhiêu phòng học hiện đại trong Học viện?
+    - Có phòng học chuyên ngành riêng không?
+    - Phòng học có màn hình tương tác không?
+    - Phòng học rộng bao nhiêu chỗ ngồi?
+    - Giờ học chủ yếu ở giảng đường hay phòng nhỏ?
+    - Có phòng học dành riêng cho tiếng Anh không?
+    - Các phòng học có được tu sửa thường xuyên không?
+    - Có lớp học online ở phòng học không?
+    - Cơ sở vật chất phòng học có hiện đại không?
+
+- intent: phongNghienCuu
+  examples: |
+    - Có phòng nghiên cứu không?
+    - Học viện có phòng lab không?
+    - Có phòng nghiên cứu cho sinh viên không?
+    - Phòng nghiên cứu ở đâu trong Học viện?
+    - Có phòng nghiên cứu an toàn thông tin không?
+    - Em muốn hỏi về các phòng thí nghiệm của trường?
+    - Có phòng lab cho ngành CNTT không?
+    - Sinh viên có được vào phòng nghiên cứu không?
+    - Phòng nghiên cứu trang bị những gì?
+    - Học viện có nhiều phòng nghiên cứu không?
+    - Có phòng nghiên cứu dành cho cao học không?
+    - Phòng nghiên cứu có máy tính không?
+    - Có phòng lab riêng cho từng ngành không?
+    - Có phòng nghiên cứu điện tử viễn thông không?
+    - Sinh viên năm nhất có được sử dụng phòng nghiên cứu không?
+    - Em muốn đăng ký vào phòng lab thì làm thế nào?
+    - Học viện có phòng nghiên cứu mật mã không?
+    - Phòng nghiên cứu mở cửa vào giờ nào?
+    - Có phòng nghiên cứu cho đề tài sinh viên không?
+    - Có thầy cô quản lý phòng nghiên cứu không?
+
+- intent: giaoTrinh
+  examples: |
+    - Sinh viên có được cấp giáo trình không?
+    - Giáo trình có phát miễn phí không?
+    - Học viện có bán giáo trình không?
+    - Có giáo trình điện tử không?
+    - Sinh viên mua giáo trình ở đâu?
+    - Em muốn biết có được phát tài liệu học tập không?
+    - Giáo trình có sẵn trong thư viện không?
+    - Giáo trình dùng cho 3 ngành có khác nhau không?
+    - Có phải tự mua giáo trình không?
+    - Giáo trình có bản online cho sinh viên không?
+    - Em có thể photo giáo trình ở đâu?
+    - Giáo trình có cập nhật thường xuyên không?
+    - Học viện phát giáo trình vào đầu kỳ học hay không?
+    - Sinh viên có được mượn giáo trình ở thư viện không?
+    - Giáo trình có kèm bài tập thực hành không?
+    - Em muốn hỏi cách nhận giáo trình khi nhập học?
+    - Có giáo trình riêng cho môn mật mã không?
+    - Giáo trình CNTT có bằng tiếng Anh không?
+    - Có hệ thống e-learning thay giáo trình không?
+    - Sinh viên có được giữ giáo trình sau khi học xong không?
+
+- intent: coSoDaoTao
+  examples: |
+    - Trường có bao nhiêu cơ sở đào tạo?
+    - Học viện có mấy cơ sở?
+    - Trường có cơ sở ở Hà Nội không?
+    - Có cơ sở nào ở miền Trung không?
+    - Học viện có cơ sở ở TP.HCM không?
+    - Em muốn biết trường có mấy cơ sở đào tạo?
+    - Các cơ sở đào tạo của Học viện ở đâu?
+    - Cơ sở chính của trường đặt ở đâu?
+    - Có cơ sở nào ở ngoại thành Hà Nội không?
+    - Cơ sở đào tạo nào có ký túc xá?
+    - Em muốn học ở cơ sở phía Nam thì có được không?
+    - Có cơ sở đào tạo liên kết không?
+    - Trường có cơ sở đào tạo quốc tế không?
+    - Có phải tất cả ngành đều học ở cơ sở Hà Nội không?
+    - Cơ sở đào tạo ở TP.HCM có đủ ngành không?
+    - Học viện có cơ sở nào ở Đà Nẵng không?
+    - Có sự khác nhau giữa các cơ sở đào tạo không?
+    - Em muốn chuyển cơ sở đào tạo có được không?
+    - Các cơ sở đào tạo có quy mô thế nào?
+
+- intent: sinhVienNganhAtttRaTruongLamGi
+  examples: |
+    - Sinh viên ngành ATTT ra trường làm gì?
+    - Học ATTT thì sau này làm nghề gì?
+    - Ngành An toàn thông tin có thể làm công việc gì?
+    - Tốt nghiệp ATTT thì làm ở đâu?
+    - Sinh viên ngành ATTT có thể làm trong lĩnh vực nào?
+    - Học ATTT thì ra trường làm ở công ty nào?
+    - Cơ hội việc làm cho ngành ATTT thế nào?
+    - Ngành ATTT có thể làm trong nhà nước không?
+    - Sinh viên ngành ATTT ra trường có dễ xin việc không?
+    - Học ATTT thì làm quản trị hệ thống được không?
+    - Ra trường ngành ATTT có thể làm pentester không?
+    - Sinh viên ATTT có làm trong công an, quân đội không?
+    - Ngành ATTT có thể làm kỹ sư bảo mật không?
+    - Sau khi học ATTT thì làm chuyên gia an ninh mạng được không?
+    - Ngành ATTT ra trường có thể làm tư vấn bảo mật không?
+    - Sinh viên ATTT có thể làm kiểm thử bảo mật ứng dụng không?
+    - Ngành ATTT có thể làm quản lý an toàn hệ thống không?
+    - Học ATTT thì có thể làm việc trong ngân hàng không?
+    - Ngành ATTT phù hợp cho việc nghiên cứu hay doanh nghiệp?
+    - Sau khi tốt nghiệp ATTT thì lương có cao không?
+
+- intent: sinhVienNganhCnttRaTruongLamGi
+  examples: |
+    - Sinh viên ngành CNTT ra trường làm gì?
+    - Học CNTT thì sau này làm nghề gì?
+    - Ngành Công nghệ thông tin có thể làm việc gì?
+    - CNTT ra trường thì xin việc ở đâu?
+    - Sinh viên ngành CNTT có cơ hội nghề nghiệp nào?
+    - Ngành CNTT làm lập trình viên được không?
+    - Ra trường CNTT có thể làm tester không?
+    - Ngành CNTT có thể làm quản trị mạng không?
+    - Học CNTT thì ra trường có thể làm ở doanh nghiệp nào?
+    - Sinh viên CNTT có làm trong nhà nước được không?
+    - Ngành CNTT ra trường làm phân tích dữ liệu được không?
+    - CNTT có thể làm trí tuệ nhân tạo không?
+    - Sinh viên CNTT ra trường có thể khởi nghiệp không?
+    - CNTT có thể làm thiết kế phần mềm không?
+    - Ngành CNTT có thể làm phát triển ứng dụng di động không?
+    - Sinh viên CNTT có thể làm fullstack developer không?
+    - Ra trường CNTT có thể làm game developer không?
+    - Ngành CNTT có cơ hội làm việc ở nước ngoài không?
+    - CNTT có thể làm khoa học dữ liệu không?
+    - Lương ngành CNTT sau khi tốt nghiệp có cao không?
+
+- intent: sinhVienNganhKtdtvtRaTruongLamGi
+  examples: |
+    - Sinh viên ngành KTĐTVT ra trường làm gì?
+    - Học Kỹ thuật điện tử viễn thông thì làm nghề gì?
+    - Ngành KTĐTVT ra trường có thể làm công việc gì?
+    - Sinh viên KTĐTVT có thể làm trong lĩnh vực nào?
+    - Ra trường ngành KTĐTVT làm ở đâu?
+    - Ngành KTĐTVT có thể làm kỹ sư điện tử không?
+    - Học KTĐTVT thì làm kỹ sư viễn thông được không?
+    - Sinh viên KTĐTVT có thể làm việc ở doanh nghiệp nào?
+    - Ra trường KTĐTVT có thể làm trong lĩnh vực mạng không?
+    - Ngành KTĐTVT có thể làm việc tại Viettel, VNPT không?
+    - Học KTĐTVT có thể làm nghiên cứu về viễn thông không?
+    - Ngành KTĐTVT có thể làm trong quốc phòng không?
+    - Sinh viên KTĐTVT ra trường có thể làm kỹ sư thiết bị không?
+    - Ngành KTĐTVT có thể làm tích hợp hệ thống không?
+    - Học KTĐTVT thì làm trong lĩnh vực IoT được không?
+    - Sinh viên KTĐTVT có thể làm phát triển phần cứng không?
+    - Ngành KTĐTVT có thể làm kỹ thuật truyền thông không?
+    - Sau khi tốt nghiệp KTĐTVT có thể làm startup không?
+    - Sinh viên KTĐTVT có được tuyển vào nhà mạng không?
+    - Ngành KTĐTVT ra trường có dễ xin việc không?
+    - Học ngành Điện tử viễn thông ra trường làm gì?
+    - Cơ hội việc làm ngành Kỹ thuật điện tử viễn thông thế nào?
+
+- intent: coHoiViecLam
+  examples: |
+    - Cơ hội việc làm sau khi tốt nghiệp thế nào?
+    - Ra trường có dễ xin việc không?
+    - Học ở Học viện thì có dễ tìm việc làm không?
+    - Tỷ lệ sinh viên có việc làm sau khi ra trường là bao nhiêu?
+    - Cơ hội việc làm của ngành CNTT có cao không?
+    - Ngành ATTT có nhiều cơ hội việc làm không?
+    - Ngành KTĐTVT có dễ kiếm việc không?
+    - Sinh viên Học viện thường làm ở đâu sau khi ra trường?
+    - Cơ hội nghề nghiệp của sinh viên có tốt không?
+    - Sau khi tốt nghiệp thì có thể làm ở nước ngoài không?
+    - Cơ hội việc làm của ngành kỹ thuật cao không?
+    - Học xong thì trường có hỗ trợ việc làm không?
+    - Có nhiều công ty đến tuyển dụng sinh viên không?
+    - Các ngành ở Học viện có thiếu nhân lực không?
+    - Em lo về cơ hội việc làm sau khi học xong?
+    - Cơ hội làm trong nhà nước có cao không?
+    - Cơ hội làm trong doanh nghiệp tư nhân thì sao?
+    - Sinh viên có dễ tham gia thị trường lao động không?
+    - Tốt nghiệp có bị thất nghiệp nhiều không?
+    - Các ngành của Học viện có xu hướng việc làm tốt không?
+
+- intent: gioiThieuViecLam
+  examples: |
+    - Trường có giới thiệu việc làm không?
+    - Học viện có hỗ trợ giới thiệu việc làm cho sinh viên không?
+    - Trường có liên kết với doanh nghiệp tuyển dụng không?
+    - Có trung tâm giới thiệu việc làm của Học viện không?
+    - Sinh viên sắp ra trường có được tư vấn nghề nghiệp không?
+    - Học viện có tổ chức ngày hội việc làm không?
+    - Trường có hợp tác với công ty để tuyển sinh viên không?
+    - Có văn phòng giới thiệu việc làm trong trường không?
+    - Sinh viên có được giới thiệu thực tập không?
+    - Học viện có giúp kết nối sinh viên với doanh nghiệp không?
+    - Trường có chương trình hỗ trợ việc làm không?
+    - Sinh viên có thể được trường giới thiệu làm việc sau tốt nghiệp không?
+    - Học viện có mạng lưới cựu sinh viên hỗ trợ việc làm không?
+    - Trường có phòng ban chuyên hỗ trợ việc làm không?
+    - Sinh viên có thể nhận thông tin tuyển dụng từ trường không?
+    - Có website việc làm của Học viện không?
+    - Học viện có liên kết với Viettel, VNPT để tuyển dụng không?
+    - Trường có mời công ty về phỏng vấn tại chỗ không?
+    - Có sự kiện tuyển dụng trong Học viện không?
+    - Học viện có giúp định hướng nghề nghiệp cho sinh viên không?
+
+- intent: coHoiLamViec
+  examples: |
+    - Sinh viên có cơ hội làm việc ở đâu?
+    - Sau khi tốt nghiệp có thể làm việc ở những đơn vị nào?
+    - Sinh viên có cơ hội làm việc trong doanh nghiệp không?
+    - Có cơ hội làm việc ở nhà nước không?
+    - Sinh viên có thể làm trong quân đội không?
+    - Sau khi học xong có thể làm việc tại ngân hàng không?
+    - Sinh viên có cơ hội làm việc trong ngành viễn thông không?
+    - Có thể làm ở các tập đoàn công nghệ lớn không?
+    - Sinh viên có thể làm ở Viettel, VNPT không?
+    - Có cơ hội làm việc ở công ty phần mềm không?
+    - Học xong có thể làm việc trong lĩnh vực mạng không?
+    - Sinh viên có thể làm ở nước ngoài không?
+    - Có cơ hội làm việc trong lĩnh vực an ninh mạng không?
+    - Học viện có giới thiệu nơi làm việc không?
+    - Sinh viên ra trường làm việc ở những ngành nào?
+    - Có cơ hội làm việc trong cơ quan nhà nước không?
+    - Học xong có thể làm ở viện nghiên cứu không?
+    - Có cơ hội làm việc ở doanh nghiệp khởi nghiệp không?
+    - Sinh viên có thể làm ở công ty nước ngoài không?
+    - Ra trường có nhiều lựa chọn nghề nghiệp không?
+
+- intent: coHoiPhatTrien
+  examples: |
+    - Trường tạo cơ hội phát triển thế nào?
+    - Học viện có hỗ trợ phát triển kỹ năng cho sinh viên không?
+    - Có cơ hội nghiên cứu khoa học cho sinh viên không?
+    - Sinh viên có được tham gia dự án thực tế không?
+    - Học viện có tổ chức cuộc thi chuyên môn không?
+    - Có chương trình trao đổi sinh viên quốc tế không?
+    - Học viện có liên kết đào tạo với nước ngoài không?
+    - Sinh viên có cơ hội học lên cao học không?
+    - Trường có khuyến khích sinh viên nghiên cứu khoa học không?
+    - Có câu lạc bộ để phát triển kỹ năng mềm không?
+    - Sinh viên có được đào tạo ngoại ngữ không?
+    - Học viện có chương trình thực tập hỗ trợ phát triển không?
+    - Có cơ hội tham gia các hội thảo chuyên ngành không?
+    - Sinh viên có được tiếp cận doanh nghiệp sớm không?
+    - Trường có hoạt động để phát triển kỹ năng mềm không?
+    - Học viện có khuyến khích sinh viên khởi nghiệp không?
+    - Có cơ hội học song ngành không?
+    - Sinh viên có được hướng dẫn nghiên cứu bởi giảng viên không?
+    - Có cơ hội phát triển nghề nghiệp sau tốt nghiệp không?
+    - Học viện có tổ chức hội thảo hướng nghiệp không?
+
+- intent: dongPhuc
+  examples: |
+    - Sinh viên có đồng phục không?
+    - Học viện có bắt buộc mặc đồng phục không?
+    - Khi đi học có phải mặc đồng phục không?
+    - Có đồng phục riêng cho sinh viên không?
+    - Học viện có quy định về đồng phục không?
+    - Có đồng phục khi học quân sự không?
+    - Khi đi thi có cần mặc đồng phục không?
+    - Sinh viên có được tự do mặc thường phục không?
+    - Có ngày nào bắt buộc mặc đồng phục không?
+    - Đồng phục của trường trông như thế nào?
+    - Có đồng phục mùa hè và mùa đông không?
+    - Sinh viên nữ có đồng phục riêng không?
+    - Sinh viên nam có phải mặc áo sơ mi đồng phục không?
+    - Học viện có phát đồng phục cho sinh viên không?
+    - Có đồng phục khi tham gia sự kiện không?
+    - Trường có quy định mặc áo logo không?
+    - Có đồng phục riêng cho ký túc xá không?
+    - Sinh viên năm nhất có phải mặc đồng phục không?
+    - Có đồng phục khi đi thực tập không?
+    - Đồng phục có được may riêng không?
+
+- intent: tiLeGioiTinh
+  examples: |
+    - Tỷ lệ nam nữ trong trường thế nào?
+    - Học viện có nhiều nam hay nhiều nữ hơn?
+    - Tỷ lệ nam sinh chiếm bao nhiêu phần trăm?
+    - Trong trường có nhiều nữ sinh không?
+    - Ngành ATTT có nhiều nam hơn không?
+    - Ngành CNTT thì tỷ lệ nam nữ thế nào?
+    - Ngành KTĐTVT có ít nữ không?
+    - Có nhiều nữ học trong Học viện không?
+    - Tỷ lệ nữ trong trường có cao không?
+    - Sinh viên nữ có chiếm bao nhiêu phần trăm?
+    - Trường có cân bằng nam nữ không?
+    - Ngành kỹ thuật thường nhiều nam đúng không?
+    - Em muốn biết trong trường nữ có ít không?
+    - Nam nữ học cùng lớp có cân bằng không?
+    - Có ngành nào nữ học nhiều hơn không?
+    - Học viện có môi trường cho nữ sinh không?
+    - Nữ sinh có chiếm số lượng nhỏ không?
+    - Ngành nào có nhiều nữ hơn trong Học viện?
+    - Tỷ lệ nam nữ thay đổi hàng năm không?
+    - Trường có chính sách hỗ trợ nữ sinh không?
+
+- intent: sinhVienVaHocVien
+  examples: |
+    - Khác nhau giữa sinh viên và học viên là gì?
+    - Sinh viên và học viên khác nhau thế nào?
+    - Học viên khác gì so với sinh viên?
+    - Khi nhập học gọi là sinh viên hay học viên?
+    - Học viên là hệ gì?
+    - Sinh viên khác học viên ở điểm nào?
+    - Trong trường có cả sinh viên và học viên không?
+    - Em không hiểu học viên là gì?
+    - Sinh viên và học viên có bằng giống nhau không?
+    - Học viên có phải sinh viên không?
+    - Tại sao gọi là Học viện mà không gọi là Đại học?
+    - Sinh viên đại học khác học viên cao học không?
+    - Học viên có phải là học sau đại học không?
+    - Sinh viên là bậc đại học đúng không?
+    - Học viên có thể là cao học hay nghiên cứu sinh không?
+    - Có phải học viên thì không phải sinh viên?
+    - Em thấy có nơi gọi là học viên, có nơi gọi sinh viên?
+    - Học viện có phân biệt cách gọi không?
+    - Sinh viên thì học cử nhân, học viên thì học gì?
+    - Khái niệm sinh viên và học viên được dùng ra sao?
+
+- intent: gioiThieuVeHocVien
+  examples: |
+    - Giới thiệu về Học viện?
+    - Cho em xin thông tin giới thiệu về Học viện Kỹ thuật mật mã
+    - Học viện Kỹ thuật mật mã là trường gì?
+    - Học viện thành lập từ năm nào?
+    - Trường thuộc bộ nào quản lý?
+    - Cho em biết vài nét khái quát về Học viện?
+    - Học viện đào tạo những ngành nào?
+    - Học viện nằm ở đâu?
+    - Giới thiệu ngắn gọn về Học viện Kỹ thuật mật mã
+    - Học viện có truyền thống như thế nào?
+    - Học viện thuộc lực lượng nào quản lý?
+    - Trường có điểm mạnh gì?
+    - Học viện có uy tín không?
+    - Em muốn tìm hiểu chung về Học viện
+    - Học viện có quy mô bao nhiêu sinh viên?
+    - Học viện có đặc thù gì khác với các trường đại học khác?
+    - Giới thiệu sơ lược về cơ sở đào tạo của Học viện
+    - Thông tin chung nhất về Học viện là gì?
+    - Học viện có khẩu hiệu hay sứ mệnh gì không?
+    - Cho em biết vài thông tin cơ bản về trường?
+
+- intent: hoatDongNhanDao
+  examples: |
+    - Trường có hoạt động nhân đạo nào?
+    - Học viện có tổ chức hiến máu nhân đạo không?
+    - Sinh viên có tham gia hoạt động tình nguyện không?
+    - Có chương trình từ thiện nào không?
+    - Học viện có hoạt động công tác xã hội không?
+    - Trường có tổ chức hiến máu hàng năm không?
+    - Sinh viên có được tham gia các chiến dịch mùa hè xanh không?
+    - Hoạt động nhân đạo nào phổ biến trong trường?
+    - Học viện có quỹ hỗ trợ nhân đạo không?
+    - Sinh viên có thể tham gia thiện nguyện không?
+    - Trường có câu lạc bộ từ thiện không?
+    - Có hoạt động giúp đỡ người nghèo không?
+    - Học viện có tổ chức đi vùng khó khăn không?
+    - Có hoạt động quyên góp ủng hộ không?
+    - Sinh viên có được tham gia chương trình nhân đạo nào?
+    - Học viện có phát động chiến dịch thiện nguyện không?
+    - Các hoạt động vì cộng đồng có không?
+    - Trường có hỗ trợ sinh viên tham gia nhân đạo ngoài trường không?
+    - Hoạt động nhân đạo nào do Đoàn Thanh niên tổ chức?
+    - Học viện có phối hợp với tổ chức nhân đạo nào không?
+
+- intent: thamGiaNckh
+  examples: |
+    - Sinh viên có được tham gia nghiên cứu khoa học không?
+    - Trường có khuyến khích sinh viên làm nghiên cứu khoa học không?
+    - Em có thể tham gia đề tài nghiên cứu không?
+    - Học viện có cuộc thi nghiên cứu khoa học không?
+    - Sinh viên năm nhất có được tham gia nghiên cứu khoa học không?
+    - Có câu lạc bộ nghiên cứu khoa học cho sinh viên không?
+    - Trường có tài trợ đề tài nghiên cứu của sinh viên không?
+    - Sinh viên có thể làm nghiên cứu với giảng viên không?
+    - Học viện có tổ chức hội nghị nghiên cứu khoa học sinh viên không?
+    - Sinh viên có thể tham gia nhóm nghiên cứu không?
+    - Có giải thưởng nghiên cứu khoa học cho sinh viên không?
+    - Sinh viên có cơ hội công bố bài báo khoa học không?
+    - Trường có hỗ trợ kinh phí nghiên cứu không?
+    - Có hoạt động nào để sinh viên phát triển nghiên cứu không?
+    - Học viện có phong trào nghiên cứu sinh viên không?
+    - Sinh viên có thể đăng ký đề tài khoa học không?
+    - Em muốn tham gia nghiên cứu thì liên hệ ở đâu?
+    - Có hội nghị báo cáo nghiên cứu khoa học hằng năm không?
+    - Nghiên cứu khoa học của sinh viên có được hướng dẫn không?
+    - Trường có CLB nghiên cứu sáng tạo không?
+
+- intent: yeuCauToiThieuXetHocBong
+  examples: |
+    - Yêu cầu tối thiểu để xét học bổng là gì?
+    - Muốn được học bổng thì cần điều kiện gì?
+    - Học bổng xét theo tiêu chí nào?
+    - Điểm trung bình bao nhiêu thì được học bổng?
+    - Có cần tham gia hoạt động để được học bổng không?
+    - Học bổng có yêu cầu về hạnh kiểm không?
+    - Muốn nhận học bổng thì cần thành tích học tập ra sao?
+    - Điều kiện tối thiểu để được xét học bổng là gì?
+    - Có cần nằm trong top sinh viên giỏi không?
+    - GPA bao nhiêu thì có học bổng?
+    - Học bổng xét theo kết quả học tập đúng không?
+    - Sinh viên cần không vi phạm kỷ luật mới được học bổng đúng không?
+    - Có cần điểm rèn luyện cao để được học bổng không?
+    - Điều kiện điểm trung bình để nhận học bổng?
+    - Học bổng yêu cầu sinh viên đạt tiêu chuẩn gì?
+    - Có cần chứng chỉ ngoại ngữ để nhận học bổng không?
+    - Học bổng xét hàng kỳ hay hàng năm?
+    - Sinh viên cần tối thiểu bao nhiêu điểm để được học bổng?
+    - Học viện xét học bổng theo tiêu chí nào?
+    - Có bao nhiêu loại học bổng và yêu cầu thế nào?
+
+- intent: hoiThao
+  examples: |
+    - Có hội thảo nào cho sinh viên không?
+    - Học viện có tổ chức hội thảo học thuật không?
+    - Sinh viên có được tham dự hội thảo không?
+    - Có hội thảo quốc tế tại Học viện không?
+    - Trường có tổ chức hội thảo chuyên ngành không?
+    - Hội thảo cho sinh viên thường diễn ra khi nào?
+    - Em muốn đăng ký tham gia hội thảo thì làm sao?
+    - Có hội thảo công nghệ thông tin không?
+    - Ngành ATTT có hội thảo riêng không?
+    - Trường có hội thảo nghiên cứu khoa học không?
+    - Sinh viên có thể tham gia hội thảo miễn phí không?
+    - Có hội thảo về khởi nghiệp không?
+    - Trường có mời doanh nghiệp đến hội thảo không?
+    - Có hội thảo định kỳ hàng năm không?
+    - Hội thảo có mở cho sinh viên ngoài trường không?
+    - Học viện có tổ chức hội thảo kỹ thuật không?
+    - Có hội thảo để sinh viên báo cáo nghiên cứu không?
+    - Hội thảo có diễn ra trực tuyến không?
+    - Sinh viên năm nhất có tham dự hội thảo được không?
+    - Có lịch hội thảo công khai cho sinh viên không?
+
+- intent: monHocTinhGpa
+  examples: |
+    - Môn học nào tính GPA?
+    - GPA được tính bằng những môn nào?
+    - Điểm GPA bao gồm các môn gì?
+    - Những môn nào ảnh hưởng đến GPA?
+    - GPA có tính tất cả các môn không?
+    - Các môn đại cương có tính vào GPA không?
+    - GPA được tính dựa trên điểm những môn nào?
+    - Môn giáo dục thể chất có tính vào GPA không?
+    - GPA tính cả môn chính trị không?
+    - GPA tính điểm chuyên ngành như thế nào?
+    - Điểm trung bình tích lũy gồm những môn nào?
+    - GPA có loại trừ môn nào không?
+    - Có môn nào không tính vào GPA không?
+    - GPA tính theo hệ số tín chỉ của môn đúng không?
+    - GPA bao gồm môn bắt buộc và tự chọn đúng không?
+
+- intent: thiTruot
+  examples: |
+    - Nếu thi trượt thì sao?
+    - Thi trượt thì xử lý thế nào?
+    - Nếu em rớt môn thì sao?
+    - Học lại khi thi trượt thế nào?
+    - Trượt môn có phải học lại không?
+    - Nếu thi lại vẫn trượt thì sao?
+    - Thi không đạt thì xử lý thế nào?
+    - Trượt môn có ảnh hưởng đến GPA không?
+    - Khi nào được thi lại nếu trượt?
+    - Em bị rớt môn thì có được đăng ký lại không?
+    - Nếu nợ môn thì xử lý thế nào?
+    - Thi trượt có bị cảnh cáo học vụ không?
+    - Học lại môn trượt có tốn thêm học phí không?
+    - Trượt môn có làm chậm tiến độ học không?
+    - Nếu không qua được môn thì có được ra trường không?
+
+- intent: suQuanTrongCuaDiemRenLuyen
+  examples: |
+    - Điểm rèn luyện quan trọng thế nào?
+    - Điểm rèn luyện có ảnh hưởng gì không?
+    - Điểm rèn luyện có tính vào GPA không?
+    - Điểm rèn luyện dùng để làm gì?
+    - Nếu điểm rèn luyện thấp thì sao?
+    - Điểm rèn luyện có ảnh hưởng đến học bổng không?
+    - Điểm rèn luyện có quan trọng bằng điểm học tập không?
+    - Trường đánh giá sinh viên qua điểm rèn luyện thế nào?
+    - Điểm rèn luyện có ảnh hưởng đến khen thưởng không?
+    - Có bị cảnh cáo nếu điểm rèn luyện thấp không?
+    - Điểm rèn luyện có cần để xét tốt nghiệp không?
+    - Điểm rèn luyện phản ánh điều gì?
+    - Điểm rèn luyện có quan trọng với sinh viên không?
+    - Có cần điểm rèn luyện cao để được xét học bổng không?
+    - Điểm rèn luyện có ảnh hưởng khi xét thi đua không?
+
+- intent: khoaCntt
+  examples: |
+    - Cho em xin thông tin về khoa CNTT?
+    - Giới thiệu khoa CNTT của Học viện
+    - Khoa CNTT có bao nhiêu giảng viên?
+    - Khoa CNTT đào tạo chuyên ngành nào?
+    - Khoa CNTT có phòng lab không?
+    - Ai là trưởng khoa CNTT?
+    - Khoa CNTT có thành lập từ khi nào?
+    - Khoa CNTT có bao nhiêu sinh viên?
+    - Khoa CNTT có hoạt động nghiên cứu gì?
+    - Có câu lạc bộ CNTT không?
+    - Khoa CNTT hợp tác với doanh nghiệp nào?
+    - Khoa CNTT có hội thảo riêng không?
+    - Khoa CNTT có định hướng nghiên cứu nào?
+    - Khoa CNTT có bao nhiêu bộ môn?
+    - Khoa CNTT có chương trình đào tạo đặc thù không?
+
+
+- intent: totNghiep
+  examples: |
+    - Điều kiện để tốt nghiệp là gì?
+    - Muốn tốt nghiệp thì cần gì?
+    - Bao giờ thì được tốt nghiệp?
+    - Tốt nghiệp cần đủ tín chỉ không?
+    - Điểm GPA bao nhiêu thì được tốt nghiệp?
+    - Có cần điểm rèn luyện để tốt nghiệp không?
+    - Nếu còn nợ môn thì có được tốt nghiệp không?
+    - Thủ tục xét tốt nghiệp như thế nào?
+    - Hồ sơ tốt nghiệp gồm những gì?
+    - Tốt nghiệp có cần làm khóa luận không?
+    - Bao giờ thì xét tốt nghiệp?
+    - Có giới hạn thời gian để tốt nghiệp không?
+    - Điều kiện học phí để tốt nghiệp là gì?
+    - Ai được xét tốt nghiệp?
+    - Điểm tiếng Anh có bắt buộc để tốt nghiệp không?
+    - Có điều kiện rèn luyện nào để tốt nghiệp không?
+    - Sinh viên được xét tốt nghiệp mấy lần trong năm?
+    - Khi nào được cấp bằng tốt nghiệp?
+    - Điều kiện bảo vệ khóa luận tốt nghiệp ra sao?
+    - Nếu không đủ điều kiện thì xử lý thế nào?
+
+- intent: hocHe
+  examples: |
+    - Có tổ chức học hè không?
+    - Trường có mở lớp học hè không?
+    - Muốn đăng ký học hè thì làm sao?
+    - Học hè áp dụng cho môn nào?
+    - Học phí học hè tính thế nào?
+    - Học hè có khác gì học kỳ chính không?
+    - Học hè có được đăng ký nhiều môn không?
+    - Bao giờ mở đăng ký học hè?
+    - Học hè diễn ra vào thời gian nào?
+    - Có cần điều kiện gì để học hè không?
+    - Học hè có bắt buộc không?
+    - Sinh viên được phép học tối đa bao nhiêu tín chỉ vào hè?
+    - Học hè dành cho những ai?
+    - Có học bổng cho học hè không?
+    - Nếu trượt môn thì có thể học lại vào hè không?
+    - Học hè có ảnh hưởng đến GPA không?
+    - Học hè tổ chức ở cơ sở nào?
+    - Đăng ký học hè ở đâu?
+    - Lịch học hè được công bố khi nào?
+    - Học hè có giảng viên như kỳ chính không?
+- intent: chuongTrinhDaoTaoattt
+  examples: |
+    - Chương trình đào tạo an toàn thông tin
+    - Ngành ATTT học những gì?
+    - Cho tôi xem CTĐT ATTT
+    - Chương trình học ngành ATTT
+    - Học ATTT có môn gì?
+    - Các môn trong chương trình an toàn thông tin
+    - Cho tôi biết môn học của ATTT
+    - Ngành an toàn thông tin đào tạo ra sao?
+    - Thông tin về chương trình học ATTT
+    - Cho tôi xem các học phần ngành ATTT
+    - Sinh viên ATTT sẽ học gì?
+    - Các môn của ngành an toàn thông tin gồm những gì?
+    - Ngành ATTT có CTĐT thế nào?
+    - CTĐT ATTT ra sao?
+    - Học ngành an toàn thông tin phải học gì?
+    - Tôi muốn xem CTĐT của ATTT
+    - Cho biết khung chương trình đào tạo ATTT
+    - Chương trình của ngành ATTT
+    - Toàn bộ môn học ATTT
+    - Khung CTĐT ngành an toàn thông tin
+
+- intent: chuongTrinhDaoTaocntt
+  examples: |
+    - Chương trình đào tạo công nghệ thông tin
+    - Ngành CNTT học những gì?
+    - CTĐT CNTT
+    - Cho tôi biết về chương trình CNTT
+    - Học CNTT có môn gì?
+    - Các môn trong ngành CNTT
+    - Cho tôi biết môn học của CNTT
+    - Ngành công nghệ thông tin đào tạo ra sao?
+    - Thông tin về chương trình học CNTT
+    - Cho tôi xem các học phần ngành CNTT
+    - Sinh viên CNTT sẽ học gì?
+    - Các môn của ngành công nghệ thông tin gồm những gì?
+    - Ngành CNTT có CTĐT thế nào?
+    - CTĐT CNTT ra sao?
+    - Học ngành CNTT phải học gì?
+    - Tôi muốn xem CTĐT của CNTT
+    - Cho biết khung chương trình đào tạo CNTT
+    - Chương trình của ngành CNTT
+    - Toàn bộ môn học CNTT
+    - Khung CTĐT ngành công nghệ thông tin
+
+- intent: chuongTrinhDaoTaoktdtvt
+  examples: |
+    - Chương trình đào tạo kỹ thuật điện tử viễn thông
+    - Ngành ĐTVT học những gì?
+    - Cho tôi xem CTĐT Điện tử viễn thông
+    - Học ĐTVT có môn gì?
+    - CTĐT Kỹ thuật điện tử viễn thông
+    - Các môn ngành ĐTVT
+    - Cho tôi biết môn học của ĐTVT
+    - Ngành Điện tử viễn thông đào tạo ra sao?
+    - Thông tin về chương trình học ĐTVT
+    - Cho tôi xem học phần ngành ĐTVT
+    - Sinh viên ĐTVT sẽ học gì?
+    - Các môn của ngành điện tử viễn thông gồm những gì?
+    - Ngành ĐTVT có CTĐT thế nào?
+    - CTĐT ĐTVT ra sao?
+    - Học ngành Điện tử viễn thông phải học gì?
+    - Tôi muốn xem CTĐT của ĐTVT
+    - Cho biết khung chương trình đào tạo ĐTVT
+    - Chương trình của ngành ĐTVT
+    - Toàn bộ môn học Điện tử viễn thông
+    - Khung CTĐT ngành kỹ thuật điện tử viễn thông
+
+- intent: heDaoTaoclc
+  examples: |
+    - Hệ đào tạo chất lượng cao
+    - Thông tin về hệ CLC
+    - Học hệ chất lượng cao có khác gì?
+    - Hệ CLC là gì?
+    - Cho tôi biết chương trình hệ CLC
+    - Hệ đào tạo CLC học như thế nào?
+    - Sinh viên học hệ CLC có ưu điểm gì?
+    - Ngành nào có hệ chất lượng cao?
+    - Khung chương trình hệ CLC
+    - Cho tôi xem CTĐT hệ CLC
+    - Học hệ CLC có khác hệ thường không?
+    - Hệ chất lượng cao có gì đặc biệt?
+    - CLC học phí như thế nào?
+    - Thông tin tuyển sinh hệ CLC
+    - Hệ chất lượng cao đào tạo ra sao?
+    - Các môn học trong hệ CLC
+    - Học hệ CLC có cần điều kiện gì không?
+    - Hệ CLC có gì mới so với hệ thường?
+    - Học hệ chất lượng cao như thế nào?
+    - CTĐT hệ đào tạo chất lượng cao
+
+- intent: hoiWebsiteTruong
+  examples: |
+    - Website chính thức của trường là gì
+    - Cho tôi biết website trường
+    - Link website học viện
+    - Trang web của trường
+    - Website chính thức của học viện
+    - Trường có website gì
+    - Website học viện kỹ thuật mật mã
+    - Cho tôi xem website trường
+    - Địa chỉ website trường
+    - Web chính thức của học viện
+
+- intent: hoiSdtTruong
+  examples: |
+    - Số điện thoại của trường là gì
+    - Cho tôi biết số điện thoại trường
+    - Liên hệ với trường qua số nào
+    - Hotline của học viện
+    - Số điện thoại liên hệ trường
+    - Trường có số điện thoại gì
+    - Gọi cho trường số mấy
+    - Số hotline của học viện
+    - Điện thoại liên hệ học viện
+    - SĐT trường là gì
+
+- intent: hoiFacebookTruong
+  examples: |
+    - Facebook chính thức của trường là gì
+    - Cho tôi link facebook trường
+    - Fanpage của học viện
+    - Facebook học viện kỹ thuật mật mã
+    - Link fb trường
+    - Trang facebook chính thức của trường
+    - Trường có facebook gì
+    - Fb của học viện
+    - Fanpage chính thức trường
+    - Cho tôi xem facebook trường
+
+- intent: hoiYoutubeTruong
+  examples: |
+    - Youtube chính thức của trường là gì
+    - Cho tôi link youtube trường
+    - Kênh youtube học viện
+    - Youtube học viện kỹ thuật mật mã
+    - Link youtube trường
+    - Trường có kênh youtube gì
+    - Youtube của học viện
+    - Kênh youtube chính thức trường
+    - Cho tôi xem kênh youtube trường
+    - Youtube channel của học viện
+
+- intent: hoiWifiTruong
+  examples: |
+    - Trường có Wifi không?
+    - Có wifi free không
+    - Wifi trường password là gì
+    - Mật khẩu wifi học viện
+    - Làm sao để kết nối wifi trường
+    - WiFi ở trường có miễn phí không
+    - Cho tôi biết pass wifi
+    - Trường có wi-fi không
+    - Wifi trường ntn
+    - Password wifi là bao nhiêu
+    - Mk wifi trường
+    - Có internet wifi không
+    - Kết nối wifi trường thế nào
+
+- intent: cachTinhDiemHocPhan
+  examples: |
+    - Cách tính điểm học phần
+    - Điểm học phần tính như thế nào
+    - Công thức tính điểm học phần
+    - Tính điểm HP ra sao
+    - Điểm học phần được tính thế nào
+    - Cho tôi biết cách tính điểm học phần
+    - Điểm quá trình và điểm thi tính như nào
+    - Tỷ lệ điểm quá trình và điểm thi
+    - ĐHP tính như thế nào
+    - Điểm cuối kỳ chiếm bao nhiêu phần trăm
+    - Điểm TP1 và TP2 là gì
+    - Cách tính điểm môn học
+    - Quy định về tính điểm học phần
+
+- intent: xemDiemThi
+  examples: |
+    - Tôi có thể xem điểm thi của mình ở đâu
+    - Xem điểm thi ở đâu
+    - Làm sao để xem điểm
+    - Link xem điểm thi
+    - Cách tra cứu điểm thi
+    - Xem kết quả thi ở đâu
+    - Tôi muốn xem điểm của tôi
+    - Tra điểm thi thế nào
+    - Web xem điểm
+    - Điểm thi của tôi ở đâu
+    - Cho tôi link xem điểm
+    - Tra cứu kết quả thi
+    - Xem điểm môn học
+
+- intent: xemLichThi
+  examples: |
+    - Làm sao để xem lịch thi của tôi?
+    - Xem lịch thi ở đâu
+    - Lịch thi của tôi
+    - Cách tra cứu lịch thi
+    - Tôi thi khi nào
+    - Link xem lịch thi
+    - Lịch thi học kỳ này
+    - Xem lịch thi cuối kỳ
+    - Tra lịch thi thế nào
+    - Cho tôi xem lịch thi
+    - Lịch thi môn nào trước
+    - Web tra lịch thi
+    - Lịch thi ở đâu
+
+- intent: dieuKienTruotMon
+  examples: |
+    - Khi nào thì tính là trượt môn
+    - Điều kiện trượt môn
+    - Trượt môn khi nào
+    - Bao nhiêu điểm thì trượt
+    - Điểm bao nhiêu là trượt
+    - Điểm dưới bao nhiêu là rớt môn
+    - Quy định về trượt môn
+    - Khi nào bị rớt môn
+    - Tiêu chí trượt môn
+    - Điểm nào thì phải học lại
+    - Tôi trượt khi nào
+    - Điểm tối thiểu để qua môn
+    - Bao nhiêu điểm thì fail
+
+- intent: xemDeThiMau
+  examples: |
+    - Cách xem đề thi mẫu
+    - Đề thi mẫu ở đâu
+    - Cho tôi xem đề thi mẫu
+    - Link đề thi mẫu
+    - Tải đề thi mẫu ở đâu
+    - Ma trận đề thi
+    - Xem ma trận và đề mẫu
+    - Có đề thi mẫu không
+    - Đề thi demo ở đâu
+    - Mẫu đề thi cuối kỳ
+    - Sample đề thi
+    - Cho tôi link đề mẫu
+    - Đề thi tham khảo
+
+- intent: cachTaiSeb
+  examples: |
+    - Cách tải SEB
+    - Download SEB ở đâu
+    - Làm sao để cài SEB
+    - SEB là gì và tải ở đâu
+    - Hướng dẫn tải SEB
+    - Link tải SEB
+    - Cài đặt SEB như thế nào
+    - Tải phần mềm SEB
+    - SEB download
+    - Hướng dẫn sử dụng SEB
+    - Safe Exam Browser tải ở đâu
+    - Cách dùng SEB thi online
+    - Link download safe exam browser
+
+- intent: miemHocPhi
+  examples: |
+    - Khi nào được miễn học phí
+    - Ai được miễn học phí
+    - Điều kiện miễn học phí
+    - Trường hợp nào được miễn học phí
+    - Miễn học phí cho ai
+    - Đối tượng được miễn học phí
+    - Con thương binh có được miễn học phí không
+    - Sinh viên mồ côi có miễn học phí không
+    - Dân tộc thiểu số hộ nghèo có miễn học phí không
+    - Quy định miễn học phí
+    - Chính sách miễn học phí
+    - Làm sao để được miễn học phí
+    - Hỗ trợ miễn học phí
+
+- intent: giam70HocPhi
+  examples: |
+    - Trường hợp nào được giảm 70% học phí
+    - Ai được giảm 70% học phí
+    - Điều kiện giảm 70 phần trăm học phí
+    - Giảm 70% học phí cho ai
+    - Dân tộc thiểu số có được giảm 70% không
+    - Vùng kinh tế khó khăn được giảm bao nhiêu
+    - Chính sách giảm 70% học phí
+    - Đối tượng giảm 70% học phí
+    - Giảm học phí 70 phần trăm
+    - Miễn giảm 70% học phí
+    - Hỗ trợ 70% học phí
+    - Sinh viên dân tộc được giảm bao nhiêu học phí
+
+- intent: giam50HocPhi
+  examples: |
+    - Sinh viên có cha mẹ bị tai nạn lao động có được hỗ trợ học phí không
+    - Giảm 50% học phí cho ai
+    - Điều kiện giảm 50% học phí
+    - Cha mẹ bị tai nạn lao động được hỗ trợ gì
+    - Tai nạn lao động được giảm học phí không
+    - Bệnh nghề nghiệp có được giảm học phí không
+    - Trường hợp nào giảm 50 phần trăm học phí
+    - Chính sách giảm 50% học phí
+    - Hỗ trợ 50% học phí cho trường hợp nào
+    - Giảm học phí 50%
+    - Miễn giảm 50% học phí
+    - Ai được giảm một nửa học phí
+
+- intent: websiteThuVien
+  examples: |
+    - Website thư viện trường
+    - Link thư viện online
+    - Thư viện điện tử của trường
+    - Web thư viện học viện
+    - Trang web thư viện
+    - Truy cập thư viện online ở đâu
+    - Thư viện số của trường
+    - Link vào thư viện trực tuyến
+    - Website thư viện học viện kỹ thuật mật mã
+    - Cho tôi link thư viện
+    - Thư viện trường ở đâu
+    - Đăng nhập thư viện online
+    - Web tra cứu sách
+
+- intent: hoiTiktokTruong
+  examples: |
+    - Kênh tiktok của trường là gì
+    - Link tiktok trường
+    - Tiktok học viện
+    - Trường có tiktok không
+    - Cho tôi link tiktok trường
+    - Tiktok học viện kỹ thuật mật mã
+    - Fanpage tiktok của trường
+    - Kênh tiktok chính thức
+    - Tik tok trường
+    - Link tiktok chính thức
+    - Trường có kênh tiktok gì
+    - Tiktok của học viện
+
+- intent: hoiFacebookDoan
+  examples: |
+    - Facebook của đoàn trường là gì
+    - Link facebook đoàn thanh niên
+    - Fanpage đoàn trường
+    - Facebook đoàn TNCS
+    - Trang facebook của đoàn
+    - Link fb đoàn thanh niên
+    - Đoàn trường có facebook gì
+    - Facebook đoàn học viện
+    - Cho tôi link facebook đoàn
+    - Fanpage đoàn thanh niên trường
+    - Fb của đoàn
+    - Link facebook hội sinh viên
+    - Trang đoàn trường
+
+- intent: nguoiNgoaiVaoTruong
+  examples: |
+    - Người ngoài trường có được phép vào trường không
+    - Khách vào trường có cần gì không
+    - Người không phải sinh viên vào được không
+    - Sau 17h vào trường thế nào
+    - Quy định về người ngoài vào trường
+    - Vào trường có cần xuất trình gì không
+    - Khách đến trường phải làm gì
+    - Người ngoài có vào được trường không
+    - Điều kiện để vào trường
+    - Phải mang gì để vào trường
+    - Ai cũng vào được trường không
+    - Vào trường sau giờ hành chính
+    - Thủ tục vào trường cho khách
+
+- intent: thuVienCuoiTuan
+  examples: |
+    - Thứ 7, chủ nhật thư viện có mở cửa không?
+    - Cuối tuần thư viện có mở không
+    - Thứ bảy thư viện có làm việc không
+    - Chủ nhật có vào được thư viện không
+    - Thư viện mở cửa thứ 7 không
+    - T7 CN thư viện có hoạt động không
+    - Cuối tuần có mở thư viện không
+    - Thư viện làm việc vào cuối tuần không
+    - Lên trường cuối tuần học được không
+    - Ngày nghỉ thư viện có mở cửa không
+    - Phòng học nhóm cuối tuần
+    - Thứ 7 học ở đâu
+
+- intent: hocCaiThienDiem
+  examples: |
+    - Có được đăng ký học cải thiện không?
+    - Học lại để cải thiện điểm
+    - Điểm D có học lại được không
+    - Cải thiện điểm trung bình tích lũy
+    - Đăng ký học cải thiện như thế nào
+    - Muốn nâng điểm phải làm sao
+    - Học lại môn để tăng điểm
+    - Cải thiện GPA thế nào
+    - Bị điểm D có học lại được không
+    - Học cải thiện điểm có được không
+    - Quy định về học cải thiện
+    - Điểm cuối cùng tính như nào khi học lại
+
+- intent: biDiemF
+  examples: |
+    - Bị điểm F có làm sao không?
+    - Điểm F phải làm gì
+    - Trượt môn có sao không
+    - Bị F có bắt buộc học lại không
+    - Quy định về điểm F
+    - Bị điểm F xử lý ra sao
+    - Học phần bị F
+    - Môn bị điểm F phải học lại khi nào
+    - Bị fail môn phải làm gì
+    - Điểm F có ảnh hưởng gì không
+    - Rớt môn thì sao
+
+- intent: xepLoaiHocLucThang4
+  examples: |
+    - Học lực theo thang điểm 4 được xếp loại như thế nào?
+    - Xếp loại học lực thang 4
+    - Mấy điểm là giỏi theo thang 4
+    - Bảng xếp loại điểm 4
+    - Từ mấy đến mấy là xuất sắc thang 4
+    - GPA bao nhiêu là khá
+    - Thang điểm 4 xếp loại ra sao
+    - Điểm 4 xếp loại giỏi khá
+    - Học lực thang 4.0
+    - Cách xếp loại theo thang 4
+    - Từ 3.2 là loại gì
+    - Bao nhiêu điểm là trung bình thang 4
+
+- intent: xepLoaiHocLucThang10
+  examples: |
+    - Thang điểm 10 thì mấy điểm là giỏi ạ?
+    - Xếp loại học lực thang 10
+    - Mấy điểm là xuất sắc theo thang 10
+    - Bảng xếp loại điểm 10
+    - Từ mấy đến mấy là khá thang 10
+    - Thang điểm 10 xếp loại thế nào
+    - Điểm 10 xếp loại giỏi khá
+    - Học lực thang 10
+    - Cách xếp loại theo thang 10
+    - Từ 8 đến 9 là loại gì
+    - Bao nhiêu điểm là yếu thang 10
+    - Dưới 4 điểm là loại gì
+
+- intent: lyDoCanhBaoHocTap
+  examples: |
+    - Vì sao tôi bị cảnh báo học tập
+    - Điều kiện cảnh báo học tập
+    - Khi nào bị cảnh báo học vụ
+    - Tại sao bị cảnh cáo học tập
+    - Lý do cảnh báo học tập
+    - Bị cảnh báo vì lý do gì
+    - Quy định về cảnh báo học tập
+    - GPA bao nhiêu thì bị cảnh báo
+    - Tín chỉ nợ đọng bao nhiêu bị cảnh báo
+    - Điểm trung bình bao nhiêu bị cảnh báo
+    - Cảnh báo học tập năm nhất
+    - Tiêu chí cảnh báo học vụ
+
+- intent: xuLyGianLanThi
+  examples: |
+    - Gian lận trong khi làm bài thi bị xử lý như nào
+    - Bị phát hiện gian lận thi
+    - Xử lý kỷ luật gian lận
+    - Quay cóp bị xử lý thế nào
+    - Gian lận thi có bị đuổi học không
+    - Quy định về gian lận trong thi
+    - Sao chép bài thi bị phạt gì
+    - Mức xử lý gian lận
+    - Bị bắt quay cóp sẽ ra sao
+    - Kỷ luật về gian lận thi cử
+    - Vi phạm quy chế thi
+    - Gian lận kiểm tra bị xử lý như nào
+
+- intent: xuLyThiHo
+  examples: |
+    - Nhờ người thi hộ có bị làm sao không?
+    - Thi hộ bị phạt gì
+    - Thi thay người khác
+    - Quy định về thi hộ
+    - Bị bắt thi hộ sẽ ra sao
+    - Mức xử lý thi hộ
+    - Nhờ người thi hộ bị đuổi học không
+    - Kỷ luật về thi hộ
+    - Thi giùm có bị đình chỉ không
+    - Xử lý sinh viên thi hộ
+    - Vi phạm thi hộ lần 2
+    - Đại diện thi có bị phạt không
+
+- intent: baoLuuKetQua
+  examples: |
+    - Học viện có cho phép bảo lưu không?
+    - Điều kiện bảo lưu kết quả học tập
+    - Xin nghỉ học tạm thời
+    - Bảo lưu được bao lâu
+    - Trường hợp nào được bảo lưu
+    - Làm sao để xin bảo lưu
+    - Quy định về bảo lưu
+    - Sinh viên có được nghỉ tạm thời không
+    - Bảo lưu vì lý do sức khỏe
+    - Thai sản có được bảo lưu không
+    - Đi nghĩa vụ có bảo lưu không
+    - Xin nghỉ học 1 năm
+- intent: bot_challenge
+  examples: |
+    - Bạn là ai?
+    - Bạn là người hay bot?
+    - Tôi đang nói chuyện với ai?
+    - Bạn có phải là bot không?
+    - Bạn có phải là robot không?
+    - Bạn có thật không?
+    - Ai tạo ra bạn?
+    - Bạn là AI ả?
+    - Bạn là chatbot hả?
+    - Máy móc hay con người?
+    - Bạn là trợ lý ảo hả?
+    - Tôi đang chat với bot?
+    - Ai đang trả lời tôi?
+    - Bạn thật sự hiểu tôi không?
+    - Bạn chỉ là chương trình thôi phải không?
+
+- intent: yeuCauVanBanBieuMauCuThe
+  examples: |
+    - Cho em xin biểu mẫu đăng ký học lại
+    - Em cần văn bản hướng dẫn nhập học
+    - Cho em xin file biểu mẫu xin nghỉ học
+    - Em muốn tải biểu mẫu đăng ký học bổng
+    - Có văn bản nào về quy chế học vụ không?
+    - Em cần file đơn xin chuyển ngành
+    - Cho em xin biểu mẫu liên quan đến học vụ
+    - Em muốn tải văn bản về tài chính học phí
+    - Có file hướng dẫn làm đồ án không?
+    - Em cần biểu mẫu đăng ký nghiên cứu khoa học
+    - Cho em xin văn bản về quy định thi cử
+    - Em muốn tải file đơn xin bảo lưu
+    - Có biểu mẫu đăng ký thực tập không?
+    - Em cần file hướng dẫn làm luận văn
+    - Cho em xin văn bản quy định về điểm rèn luyện
+    - Em muốn tải biểu mẫu xin cấp giấy chứng nhận
+    - Có file mẫu đơn xin thôi học không?
+    - Em cần văn bản về quy trình tốt nghiệp
+    - Cho em xin biểu mẫu đăng ký môn học
+    - Em muốn tải file hướng dẫn đăng ký học phần
+    - Có văn bản nào về học phí không?
+    - Em cần biểu mẫu xin miễn giảm học phí
+    - Cho em file đơn xin vay vốn ngân hàng
+    - Em muốn tải biểu mẫu liên quan tài chính
+    - Có file hướng dẫn đóng học phí không?
+    - Em cần văn bản về chính sách học bổng
+    - Cho em xin biểu mẫu đăng ký ký túc xá
+    - Em muốn tải file quy định về sinh viên
+    - Có biểu mẫu nào về nghiên cứu không?
+    - Em cần file đơn đăng ký đề tài NCKH
+    - Cho em xin biểu mẫu xin nghỉ phép
+    - Em cần văn bản hướng dẫn làm khóa luận
+    - Có file quy định về thi lại không?
+    - Em muốn tải biểu mẫu xin cải thiện điểm
+    - Cho em văn bản về quy chế đào tạo
+
+- intent: yeuCauVanBanBieuMauChungChung
+  examples: |
+    - Cho em xin tài liệu
+    - Em cần văn bản
+    - Cho tôi xin biểu mẫu
+    - Em muốn tải file
+    - Có tài liệu không?
+    - Cho em xin file
+    - Em cần biểu mẫu
+    - Tôi muốn xem văn bản
+    - Cho em tài liệu
+    - Em cần file gì đó
+    - Có văn bản không?
+    - Cho tôi biểu mẫu
+    - Em muốn tài liệu
+    - Tôi cần file
+    - Cho xin văn bản
+    - Em muốn xem biểu mẫu
+    - Có file nào không?
+    - Tôi cần tài liệu
+    - Cho em văn bản
+    - Em muốn file
+    - cho em xin bieu mau
+    - em can van ban
+    - co tai lieu ko
+    - em muon file
+    - cho xin van ban
+    - can tai lieu
+    - co bieu mau nao khong
+    - em can file
+    - cho toi tai lieu
+    - muon xem van ban
+
+- intent: hocVuotTotNghiepSom
+  examples: |
+    - Có được học vượt để tốt nghiệp sớm không?
+    - Em có thể học vượt không?
+    - Trường có cho phép học vượt không?
+    - Có được tốt nghiệp sớm không?
+    - Học vượt để ra trường sớm được không?
+    - Em muốn học vượt để tốt nghiệp trước 4 năm
+    - Có thể học thêm tín chỉ để tốt nghiệp sớm không?
+    - Trường có tổ chức học vượt không?
+    - Làm sao để tốt nghiệp sớm?
+    - Có chương trình học vượt không?
+
+- intent: hoTroVayVonNganHang
+  examples: |
+    - Trường có hỗ trợ thủ tục vay vốn ngân hàng cho sinh viên không?
+    - Em có thể vay tiền ngân hàng không?
+    - Làm sao để vay vốn ngân hàng?
+    - Trường có hỗ trợ vay học phí không?
+    - Thủ tục vay vốn ngân hàng như thế nào?
+    - Em muốn vay tiền để đóng học phí
+    - Có chương trình vay vốn cho sinh viên không?
+    - Ngân hàng nào cho sinh viên vay?
+    - Vay vốn NHCSXH như thế nào?
+    - Trường có xác nhận cho vay vốn không?
+    - Làm hồ sơ vay ngân hàng ở đâu?
+    - Mức vay tối đa là bao nhiêu?
+    - Lãi suất vay vốn sinh viên như thế nào?
+    - Em thuộc diện STEM có được vay không?
+
+- intent: hinhThucDongHocPhi
+  examples: |
+    - Có những hình thức đóng học phí nào?
+    - Em đóng học phí bằng cách nào?
+    - Có thể đóng học phí qua app không?
+    - Đóng học phí bằng tiền mặt được không?
+    - Chuyển khoản học phí như thế nào?
+    - Số tài khoản đóng học phí là gì?
+    - Cú pháp chuyển khoản học phí ra sao?
+    - Em có thể nộp tiền trực tiếp không?
+    - Hình thức thanh toán học phí nào được chấp nhận?
+    - Đóng học phí online như thế nào?
+    - Tài khoản ngân hàng của trường là gì?
+    - Nội dung chuyển khoản ghi như thế nào?
+    - Có thể đóng học phí qua ví điện tử không?
+    - Trường nhận thanh toán qua hình thức nào?

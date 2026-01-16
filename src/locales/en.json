@@ -1,0 +1,39 @@
+{
+    "welcome": "Welcome",
+    "login": "Login",
+    "logout": "Logout",
+    "forum": "Forum",
+    "search_placeholder": "Search posts, groups, users...",
+    "friends": {
+        "title": "Friends",
+        "list": "Friends List",
+        "requests": "Friend Requests",
+        "blocked": "Blocked Users",
+        "add_friend": "Add Friend",
+        "unfriend": "Unfriend",
+        "block": "Block",
+        "unblock": "Unblock",
+        "accept": "Accept",
+        "reject": "Reject",
+        "cancel_request": "Cancel Request",
+        "pending_sent": "Request Sent",
+        "no_friends": "You have no friends yet",
+        "no_requests": "No friend requests",
+        "no_blocked": "No blocked users",
+        "search_friends": "Search friends..."
+    },
+    "groups": {
+        "title": "Groups",
+        "all_groups": "All Groups",
+        "my_groups": "My Groups",
+        "find_groups": "Find Groups",
+        "create_group": "Create Group",
+        "join": "Join",
+        "leave": "Leave",
+        "joined": "Joined",
+        "members": "members",
+        "public": "Public",
+        "private": "Private",
+        "search_placeholder": "Search groups..."
+    }
+}

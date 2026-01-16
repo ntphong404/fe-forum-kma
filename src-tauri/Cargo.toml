@@ -1,0 +1,23 @@
+[package]
+name = "forum-kma"
+version = "0.1.0"
+description = "KMA Forum Application"
+authors = ["KMA Students"]
+edition = "2021"
+rust-version = "1.60"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.5", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "2.5", features = [] }
+tokio = { version = "1", features = ["full"] }
+
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
